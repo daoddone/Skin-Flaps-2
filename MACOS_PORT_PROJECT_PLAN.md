@@ -292,6 +292,13 @@ The main barriers to macOS compatibility are:
 - Next steps: Test hook interaction following knife/undermine actions.
 - Blockers: None
 
+**[2025-07-18]** - [OpenAI Codex]
+- Task completed: Increased hook drag displacement limit to improve visible movement.
+- Files modified: `SkinFlaps/src/surgicalActions.cpp`, `MACOS_PORT_PROJECT_PLAN.md`
+- Next steps: Verify that hook dragging now responds after undermining.
+- Blockers: None
+
+
 ---
 
 ## Technical Notes
