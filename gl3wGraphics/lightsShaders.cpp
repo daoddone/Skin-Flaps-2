@@ -20,7 +20,7 @@ GLuint lightsShaders::_colorProgram=0;
 GLuint lightsShaders::_lineProgram=0;
 GLuint lightsShaders::_normalTangentProgram = 0;
 
-static const char *normalTangentVertexShader = "#version 130\n"
+static const char *normalTangentVertexShader = "#version 150 core\n"
 "in vec4 vVertex;\n"
 "in vec2 vTexture;\n"
 "out vec3 vPosition;\n"
@@ -33,7 +33,7 @@ static const char *normalTangentVertexShader = "#version 130\n"
 "	vIndex = gl_VertexID;\n"
 "}";
 
-static const char *normalTangentGeometryShader = "#version 150\n" // geometry shaders require at least version 1.5
+static const char *normalTangentGeometryShader = "#version 150 core\n" // geometry shaders require at least version 1.5
 "layout(triangles) in;\n"
 "in VertexData{\n"
 "	vec3 vPosition;\n"
@@ -52,7 +52,7 @@ static const char *normalTangentGeometryShader = "#version 150\n" // geometry sh
 "	EndPrimitive();\n"
 "}";
 
-static const char *GTVertexShaderColoredLine = "#version 130\n"
+static const char *GTVertexShaderColoredLine = "#version 150 core\n"
 	"in vec4 vVertex;\n"
 	"uniform mat4   mvpMatrix;\n"
 	"void main(void)\n"
@@ -61,7 +61,7 @@ static const char *GTVertexShaderColoredLine = "#version 130\n"
 	"   gl_Position = mvpMatrix * vVertex;"
 	"}";
 
-static const char *GTFragmentShaderColoredLine = "#version 130\n"
+static const char *GTFragmentShaderColoredLine = "#version 150 core\n"
 	"out vec4 vFragColor;\n"
 	"uniform vec4 objectColor;\n"
 	"void main(void)\n"
@@ -69,7 +69,7 @@ static const char *GTFragmentShaderColoredLine = "#version 130\n"
 	"	vFragColor = objectColor;\n"
 	"}";
 
-static const char *GTVertexShaderColoredPhong = "#version 130\n"
+static const char *GTVertexShaderColoredPhong = "#version 150 core\n"
 	"in vec4 vVertex;\n"
 	"in vec3 vNormal;\n"
 	"uniform mat4   mvpMatrix;\n"
@@ -95,7 +95,7 @@ static const char *GTVertexShaderColoredPhong = "#version 130\n"
 	"   gl_Position = mvpMatrix * vVertex;"
 	"}";
 
-static const char *GTFragmentShaderColoredPhong = "#version 130\n"
+static const char *GTFragmentShaderColoredPhong = "#version 150 core\n"
 	"smooth in vec3 normal,lightDir;\n"
 	"out vec4 vFragColor;\n"
 	"uniform vec4 objectColor;\n"
@@ -125,7 +125,7 @@ static const char *GTFragmentShaderColoredPhong = "#version 130\n"
 	"		vFragColor.rgb += vec3(.5, .5, .5) * fSpec; }\n"
 	"}";
 
-static const char *GTVertexShaderDefault = "#version 130\n"
+static const char *GTVertexShaderDefault = "#version 150 core\n"
 	// Incoming per vertex
 	"in vec4 vVertex;\n"
 	"in vec3 vNormal;\n"
@@ -155,7 +155,7 @@ static const char *GTVertexShaderDefault = "#version 130\n"
 static const char *GTFragmentShaderDefault = // ADS Point lighting Shader
 	// Adapted from Richard S. Wright Jr.
 	// OpenGL SuperBible
-	"#version 130\n"
+	"#version 150 core\n"
 	"out vec4 vFragColor;\n"
 	"uniform vec4 ambientColor;\n"
 	"uniform vec4 diffuseColor;\n"

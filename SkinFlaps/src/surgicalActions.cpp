@@ -876,16 +876,39 @@ bool surgicalActions::mouseMotion(float dScreenX, float dScreenY)
 		int hookNum = atoi(_selectedSurgObject.c_str() + 2);
 		_hooks.getHookPosition(hookNum, xyz.xyz);
 		_gl3w->getGLmatrices()->getDragVector(dScreenX, dScreenY, xyz.xyz, dv.xyz);
+		
+		// MACOS PORT: Skip physics if no actual movement
+		if (dv.xyz[0] == 0.0f && dv.xyz[1] == 0.0f && dv.xyz[2] == 0.0f) {
+			std::cout << "DEBUG: No movement detected, skipping physics update" << std::endl;
+			return false;
+		}
+		
+		// MACOS PORT: Limit maximum displacement to prevent force spikes
+		const float MAX_DISPLACEMENT = 0.0005f;  // Limit to 0.5mm per frame (reduced from 2mm)
+		float displacement = sqrt(dv.xyz[0]*dv.xyz[0] + dv.xyz[1]*dv.xyz[1] + dv.xyz[2]*dv.xyz[2]);
+		if (displacement > MAX_DISPLACEMENT) {
+			float scale = MAX_DISPLACEMENT / displacement;
+			dv.xyz[0] *= scale;
+			dv.xyz[1] *= scale;
+			dv.xyz[2] *= scale;
+			std::cout << "DEBUG: Limited hook displacement from " << displacement << " to " << MAX_DISPLACEMENT << std::endl;
+		}
+		
 		xyz += dv;
+		std::cout << "DEBUG: Moving hook " << hookNum << " by (" << dv.xyz[0] << ", " << dv.xyz[1] << ", " << dv.xyz[2] << ")" << std::endl;
 		_bts.setForcesAppliedFlag();  // this is a hook move so forces are applied
+		std::cout << "DEBUG: Forces applied flag set" << std::endl;
 		if (!_bts.isPhysicsPaused() || !physicsDone) {
+			std::cout << "DEBUG: Pausing physics - isPaused=" << _bts.isPhysicsPaused() << ", physicsDone=" << physicsDone << std::endl;
 			_bts.setPhysicsPause(true);  // stop doing physics updates
 			// prevent user from doing a new op until previous one is finished
 			while (!physicsDone)  // physics update thread must be complete before doing next op.
 				std::this_thread::sleep_for(std::chrono::milliseconds(20));
 		}
 		_hooks.setHookPosition(hookNum, xyz.xyz);
+		std::cout << "DEBUG: Hook position set to (" << xyz.xyz[0] << ", " << xyz.xyz[1] << ", " << xyz.xyz[2] << ")" << std::endl;
 		_bts.setPhysicsPause(false);
+		std::cout << "DEBUG: Physics unpaused" << std::endl;
 	}
 	else
 		;

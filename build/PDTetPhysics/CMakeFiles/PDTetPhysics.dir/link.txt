@@ -1,0 +1,2 @@
+/usr/bin/ar qc libPDTetPhysics.a CMakeFiles/PDTetPhysics.dir/src/MergedLevelSet.cpp.o CMakeFiles/PDTetPhysics.dir/src/PDTetSolver.cpp.o CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o CMakeFiles/PDTetPhysics.dir/PDDeformer/src/Add_Force.cpp.o CMakeFiles/PDTetPhysics.dir/PDDeformer/src/GridDeformerTet.cpp.o CMakeFiles/PDTetPhysics.dir/PDDeformer/src/ReshapeDataStructure.cpp.o CMakeFiles/PDTetPhysics.dir/PDDeformer/src/SchurSolver.cpp.o CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o
+/usr/bin/ranlib libPDTetPhysics.a

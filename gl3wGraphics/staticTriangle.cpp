@@ -21,17 +21,9 @@
 #include "gl3wGraphics.h"
 #include "staticTriangle.h"
 
-//////////////////////// TEMPORARY TEMPORARY TEMPORARY - On SnowLeopard this is suppored, but GLEW doens't hook up properly
-//////////////////////// Fixed probably in 10.6.3
-#ifdef __APPLE__
-#define glGenVertexArrays glGenVertexArraysAPPLE
-#define glDeleteVertexArrays  glDeleteVertexArraysAPPLE
-#define glBindVertexArray	glBindVertexArrayAPPLE
-#endif
-
 GLuint staticTriangle::_staticProgram = 0;
 
-static const GLchar* staticVertexShader = "#version 130 \n"
+static const GLchar* staticVertexShader = "#version 150 core\n"
 "in vec4 vVertex;"
 "in vec3 vTangent;"
 "in vec3 vNormal;"
@@ -63,7 +55,7 @@ static const GLchar* staticVertexShader = "#version 130 \n"
 "}";
 
 static const GLchar* staticFragmentShader =
-"#version 150 \n"
+"#version 150 core\n"
 "out vec4 vFragColor; "
 "uniform vec4 ambientColor; "
 "uniform vec4 diffuseColor; "
@@ -157,7 +149,7 @@ std::shared_ptr<sceneNode> staticTriangle::createStaticSceneNode(materialTriangl
 	_mt = mt;
 	if (_staticProgram < 1) {
 		if (!createStaticProgram())
-			return false;
+			return nullptr;
 	}
 	_snNow = std::make_shared<sceneNode>();
 	_snNow->setType(sceneNode::nodeType::STATIC_TRIANGLES);
@@ -165,7 +157,7 @@ std::shared_ptr<sceneNode> staticTriangle::createStaticSceneNode(materialTriangl
 	std::sort(textureIds.begin(), textureIds.end());
 	for (int n = (int)textureIds.size(), i = 0; i < n; ++i) {
 		if (!_gl3w->getTextures()->textureExists(textureIds[i]))
-			return false;
+			return nullptr;
 		_snNow->add2DtextureBufferNumber(_gl3w->getTextures()->getOGLtextureNumber(textureIds[i]));
 	}
 	_snNow->setGlslProgramNumber(_staticProgram);

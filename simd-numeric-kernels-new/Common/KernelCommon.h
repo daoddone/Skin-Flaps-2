@@ -7,6 +7,17 @@
 
 #include <type_traits>
 
+// Platform-specific inline definitions
+#ifndef __forceinline
+    #ifdef _MSC_VER
+        // Microsoft Visual C++ - already defined
+    #elif defined(__GNUC__) || defined(__clang__)
+        #define __forceinline inline __attribute__((always_inline))
+    #else
+        #define __forceinline inline
+    #endif
+#endif
+
 //
 //   Don't define here. Use FIB=1 on the makefile command line.
 //

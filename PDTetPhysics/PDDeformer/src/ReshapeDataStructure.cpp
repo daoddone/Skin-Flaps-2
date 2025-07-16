@@ -1,10 +1,14 @@
+#ifdef USE_OPENMP
 #include <omp.h>
+#endif
 
 #include "ReshapeDataStructure.h"
 
 template<class T, int CoordinateStride>
 void unblockAddForce(const T* fReshapedBasePtr, const int* reshapeIndicesOffsets, const int* reshapeIndicesValues, const int nParticles, T* f) {
+    #ifdef USE_OPENMP
     #pragma omp parallel for
+    #endif
     for (int i = 0; i < nParticles; i++) {
         T fX = 0., fY = 0., fZ = 0.;
         const int* offsetPtr = &reshapeIndicesValues[reshapeIndicesOffsets[i]];
@@ -27,7 +31,9 @@ void blockX(const T* X, const int* elementsPtr, const int nBlocks, T* XBasePtr) 
     auto reshapeElements = reinterpret_cast<const int (*) [d+1][CoordinateStride]>(elementsPtr);
     auto XReshapedBasePtr = reinterpret_cast<T (*) [d+1][d][CoordinateStride]>(XBasePtr);
     
+    #ifdef USE_OPENMP
     #pragma omp parallel for
+    #endif
     for( int b = 0; b < nBlocks; b++ )
         for ( int v = 0; v < d+1; v++) {
             WideType xBlock = XReshapedBasePtr[b][v][0];

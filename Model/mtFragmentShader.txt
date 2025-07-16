@@ -1,4 +1,4 @@
-#version 150 
+#version 150 core
 // next line only necessary in web_gl. Has been in openGL since 2.0
 //	#extension GL_OES_standard_derivatives : enable
 

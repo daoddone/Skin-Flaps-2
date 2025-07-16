@@ -3,7 +3,6 @@
 // Distributed under the FreeBSD license (see license.txt)
 //#####################################################################
 
-#include <mkl.h>
 #include "PardisoWrapper.h"
 #include "MKLWrapper.h"
 

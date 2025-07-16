@@ -117,7 +117,11 @@ void skinCutUndermineTets::createFlapTopBottomVertices(const int topTriangle, fl
 {  // If uv == 0, 0 || uv == 1, 0 || uv == 0, 1 existing topVertex returned, otherwise new one created. Creates/gets a corresponding bottomVertex.
 	// If topTriangle already part of a flap a bottom vertex will be added. If no flap present an unconnected bottom edge vertex will be created.
 	// If a flap bottom does not already exists on input, bottomVertex will be negated on output.
-	assert(_mt->triangleMaterial(topTriangle) == 2);
+	// Allow hooks to be placed on skin surface (material 2) or incision edges (material 3)
+	int material = _mt->triangleMaterial(topTriangle);
+	if (material != 2 && material != 3) {
+		throw(std::logic_error("Hook placement attempted on inappropriate tissue type. Use only on skin surface or incision edges."));
+	}
 	// look for a flap bottom replicant of topTriangle if it exists.
 	int deepVerts[3], *tr = _mt->triangleVertices(topTriangle);
 	int bottomTriangle = 0, n = _mt->numberOfTriangles(), j = -1;

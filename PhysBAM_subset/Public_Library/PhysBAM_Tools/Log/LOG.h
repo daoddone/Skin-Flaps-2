@@ -10,11 +10,13 @@
 #include <PhysBAM_Tools/Parsing/STRING_UTILITIES.h>
 #include <PhysBAM_Tools/Utilities/NONCOPYABLE.h>
 #include <PhysBAM_Tools/Utilities/PHYSBAM_OVERRIDE.h>
-#include <PhysBAM_Tools/Utilities/TIMER.h>
 #include <cassert>
 #include <ostream>
 #include <sstream>
 namespace PhysBAM{
+
+// Forward declaration to break circular dependency
+class TIMER;
 
 #define LOG_REAL LOG
 

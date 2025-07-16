@@ -18,7 +18,7 @@ using namespace std;
 const short BITMAP_MAGIC_NUMBER=19778;
 const int RGB_BYTE_SIZE=3;
 
-#pragma pack(push,bitmap_data,1)
+// #pragma pack(push,bitmap_data,1)
 
 typedef struct tagRGBQuad {
 	char rgbBlue;
@@ -49,7 +49,7 @@ typedef struct tagBitmapInfoHeader {
 	unsigned int biClrImportant;
 } BitmapInfoHeader;
 
-#pragma pack(pop,bitmap_data)
+// #pragma pack(pop,bitmap_data)
 
 class Bitmap {
 public:

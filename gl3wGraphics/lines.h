@@ -22,7 +22,7 @@ public:
 	void clear();
 	void remove();
 	inline bool linesVisible() { return _visible; }
-	inline void setLinesVisible(bool visible);
+	void setLinesVisible(bool visible);
 	//	bool empty() {return _linesVertexArrayBufferObject<1;	}
 	void setGl3wGraphics(gl3wGraphics *gl3w) { _gl3w = gl3w; }
 	void computeLocalBounds();

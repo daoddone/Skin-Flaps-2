@@ -122,7 +122,7 @@ bool deepCut::cutDeep()  // interpost connection data already loaded in _deepPos
 			return true;
 		int mat = _mt->triangleMaterial(ri.triangle);
 		float uv[2] = { (float)ri.uv[0], (float)ri.uv[1] };
-		if (mat == 2) {
+		if (mat == 2 || mat == 3) {
 			int topVertex, bottomVertex;
 			createFlapTopBottomVertices(ri.triangle, uv, topVertex, bottomVertex);
 			ri.mat2Vert = topVertex;

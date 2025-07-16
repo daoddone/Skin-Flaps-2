@@ -1,8 +1,10 @@
-#include "GridDeformerTet.h"
+#include "../include/GridDeformerTet.h"
 #include "Add_Force.h"
+#include <chrono>
 
-
+#ifdef USE_OPENMP
 #include <omp.h>
+#endif
 
 #include "dumper.h"
 
@@ -267,11 +269,11 @@ namespace PhysBAM {
             for (int c = 0; c < m_collisionConstraints.size(); c++) {
                 const auto &constraint = m_collisionConstraints[c];
                 VectorType x;
-                x = DiscretizationType::interpolateX(constraint.m_elementIndex, constraint.m_weights, m_X);
+                x = DiscretizationType::template interpolateX<elementNodes>(constraint.m_elementIndex, constraint.m_weights, m_X);
                 x -= constraint.m_xT;
                 x *= -constraint.m_stiffness;
 
-                DiscretizationType::distributeForces(x, constraint.m_elementIndex, constraint.m_weights, f);
+                DiscretizationType::template distributeForces<elementNodes>(x, constraint.m_elementIndex, constraint.m_weights, f);
             }
         }
 
@@ -279,13 +281,13 @@ namespace PhysBAM {
             for (int c = 0; c < m_collisionSutures.size(); c++) {
                 const auto &suture = m_collisionSutures[c];
                 VectorType x1;
-                x1 = DiscretizationType::interpolateX(suture.m_elementIndex1, suture.m_weights1, m_X);
-                auto x2 = DiscretizationType::interpolateX(suture.m_elementIndex2, suture.m_weights2, m_X);
+                x1 = DiscretizationType::template interpolateX<elementNodes>(suture.m_elementIndex1, suture.m_weights1, m_X);
+                auto x2 = DiscretizationType::template interpolateX<elementNodes>(suture.m_elementIndex2, suture.m_weights2, m_X);
 //                x1 = x1 - x2 - (x1 - x2).Normalized()*suture.m_restLength;
 				x1 = (x1 - x2).Projected(suture.m_normal);
                 x1 *= -suture.m_stiffness;
-                DiscretizationType::distributeForces(x1, suture.m_elementIndex1, suture.m_weights1, f);
-                DiscretizationType::distributeForces(-x1, suture.m_elementIndex2, suture.m_weights2, f);
+                DiscretizationType::template distributeForces<elementNodes>(x1, suture.m_elementIndex1, suture.m_weights1, f);
+                DiscretizationType::template distributeForces<elementNodes>(-x1, suture.m_elementIndex2, suture.m_weights2, f);
             }
         }
     }
@@ -299,14 +301,14 @@ namespace PhysBAM {
 				const auto &constraint = m_constraints[c];
 				if (constraint.m_stiffness) {
 					VectorType x;
-					x = DiscretizationType::interpolateX(constraint.m_elementIndex, constraint.m_weights, m_X);
+					x = DiscretizationType::template interpolateX<elementNodes>(constraint.m_elementIndex, constraint.m_weights, m_X);
 					x -= constraint.m_xT;
 					const T length = x.Lp_Norm(2);
 					if (length > constraint.m_stressLimit)
 						x *= constraint.m_stressLimit / length;
 					x *= -constraint.m_stiffness;
 
-					DiscretizationType::distributeForces(x, constraint.m_elementIndex, constraint.m_weights, f);
+					DiscretizationType::template distributeForces<elementNodes>(x, constraint.m_elementIndex, constraint.m_weights, f);
 				}
             }
 
@@ -316,12 +318,12 @@ namespace PhysBAM {
             for (int c = 0; c < m_sutures.size(); c++) {
                 const auto &suture = m_sutures[c];
                 VectorType x1;
-                x1 = DiscretizationType::interpolateX(suture.m_elementIndex1, suture.m_weights1, m_X);
-                auto x2 = DiscretizationType::interpolateX(suture.m_elementIndex2, suture.m_weights2, m_X);
+                x1 = DiscretizationType::template interpolateX<elementNodes>(suture.m_elementIndex1, suture.m_weights1, m_X);
+                auto x2 = DiscretizationType::template interpolateX<elementNodes>(suture.m_elementIndex2, suture.m_weights2, m_X);
                 x1 = x1 - x2 - (x1 - x2).Normalized()*suture.m_restLength;
                 x1 *= -suture.m_stiffness;
-                DiscretizationType::distributeForces(x1, suture.m_elementIndex1, suture.m_weights1, f);
-                DiscretizationType::distributeForces(-x1, suture.m_elementIndex2, suture.m_weights2, f);
+                DiscretizationType::template distributeForces<elementNodes>(x1, suture.m_elementIndex1, suture.m_weights1, f);
+                DiscretizationType::template distributeForces<elementNodes>(-x1, suture.m_elementIndex2, suture.m_weights2, f);
             }
         }
 #if 1
@@ -329,11 +331,11 @@ namespace PhysBAM {
 			for (int c = 0; c < m_InternodeConstraints.size(); c++) {
 				const auto& nC = m_InternodeConstraints[c];
 				VectorType x1;
-				x1 = DiscretizationType::interpolateX(nC.m_macroNodes, nC.m_macroWeights, m_X);
+				x1 = DiscretizationType::template interpolateX<d>(nC.m_macroNodes, nC.m_macroWeights, m_X);
 				auto x2 = m_X[nC.m_microNodeNumber];
 				x1 = x1 - x2;
 				x1 *= -nC.m_stiffness;
-				DiscretizationType::distributeForces(x1, nC.m_macroNodes, nC.m_macroWeights, f);
+				DiscretizationType::template distributeForces<d>(x1, nC.m_macroNodes, nC.m_macroWeights, f);
 				f[nC.m_microNodeNumber] -= x1;
 			}
 		}
@@ -344,14 +346,14 @@ namespace PhysBAM {
 				const auto &constraint0 = m_fakeSutures[c];
 				const auto &constraint1 = m_fakeSutures[c+1];
 
-				x0 = DiscretizationType::interpolateX(constraint0.m_elementIndex, constraint0.m_weights, m_X);
-				x1 = DiscretizationType::interpolateX(constraint1.m_elementIndex, constraint1.m_weights, m_X);
+				x0 = DiscretizationType::template interpolateX<elementNodes>(constraint0.m_elementIndex, constraint0.m_weights, m_X);
+				x1 = DiscretizationType::template interpolateX<elementNodes>(constraint1.m_elementIndex, constraint1.m_weights, m_X);
 				x = (x1 - x0)/2;
 				// x -= constraint.m_xT;
 				x *= constraint0.m_stiffness;
 
-				DiscretizationType::distributeForces(x, constraint0.m_elementIndex, constraint0.m_weights, f);
-				DiscretizationType::distributeForces(-x, constraint1.m_elementIndex, constraint1.m_weights, f);
+				DiscretizationType::template distributeForces<elementNodes>(x, constraint0.m_elementIndex, constraint0.m_weights, f);
+				DiscretizationType::template distributeForces<elementNodes>(-x, constraint1.m_elementIndex, constraint1.m_weights, f);
 			}
 		}
     }
@@ -407,7 +409,9 @@ namespace PhysBAM {
 							for (int e = 0; e < BlockWidth; e++)
 								reshapeUncollisionf[b][v][i][e] = 0;
 
+#ifdef USE_OPENMP
 #pragma omp parallel for
+#endif
 				for (int be = 0; be < m_nUncollisionBlocks; be++) {
 					for (int ee = 0; ee < BlockWidth; ee += Tarch::Width)
 						Add_Force<Tarch, T[BlockWidth]>(reinterpret_cast<T(&)[d + 1][d][BlockWidth]>(m_reshapeUncollisionX[be][0][0][ee]),
@@ -445,7 +449,9 @@ namespace PhysBAM {
 							for (int e = 0; e < BlockWidth; e++)
 								reshapeCollisionf[b][v][i][e] = 0;
 
+#ifdef USE_OPENMP
 #pragma omp parallel for
+#endif
 				for (int be = 0; be < m_nCollisionBlocks; be++) {
 					for (int ee = 0; ee < BlockWidth; ee += Tarch::Width)
 						Add_Force<Tarch, T[BlockWidth]>(reinterpret_cast<T(&)[d + 1][d][BlockWidth]>(m_reshapeCollisionX[be][0][0][ee]),

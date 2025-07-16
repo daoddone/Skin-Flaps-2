@@ -24,7 +24,7 @@ BUILD_CONSTANT(_VSmall_Number,1.e-12f);
 BUILD_CONSTANT(_VNegTwo,-2.0f);
 #endif
 
-#define DECLARE_CONSTANT(name) typename Tarch::Scalar alignas(sizeof(Tarch::ScalarRegister)) name[Tarch::Width];
+#define DECLARE_CONSTANT(name) alignas(sizeof(typename Tarch::ScalarRegister)) typename Tarch::Scalar name[Tarch::Width];
 DECLARE_CONSTANT(_VFour_Gamma_Squared);
 DECLARE_CONSTANT(_VSine_Pi_Over_Eight);
 DECLARE_CONSTANT(_VCosine_Pi_Over_Eight);

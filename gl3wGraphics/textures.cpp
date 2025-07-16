@@ -3,7 +3,14 @@
 // Date: January 22, 2012
 // Purpose: Texture and bump map loader
 
+#include <assert.h>
 #include <fstream>
+#include <memory>
+#include <string>
+#include <algorithm>
+#include <cstdlib>
+#include <cstring>
+#include <GL/gl3w.h>
 #ifdef linux
 #include <stdlib.h>
 #endif
@@ -18,6 +25,11 @@
 
 #include "Bitmap.h"
 #include "textures.h"
+
+// Macro for handling little-endian word conversion
+#ifndef LITTLE_ENDIAN_WORD
+#define LITTLE_ENDIAN_WORD(x) // No-op on little-endian systems (most modern systems)
+#endif
 
 textures::textures()
 {
@@ -47,7 +59,8 @@ int textures::textureExists(std::string &textureName)
 }
 
 int textures::loadTexture(int txId, const char *fileName)	{
-	int existTx = textureExists(std::string(fileName));
+	std::string fileStr(fileName);
+	int existTx = textureExists(fileStr);
 	if (existTx > 0) {
 		if (existTx == txId)
 			return txId;
@@ -92,16 +105,33 @@ bool textures::loadJpgTexture(const char* fileName, int &width, int &height) {
     stbi_set_flip_vertically_on_load(true);
     unsigned char* img = stbi_load(fileName, &width, &height, &channels, 0);
     if (img == NULL) {
-        printf("Error in loading the image\n");
+        printf("Error in loading the image: %s\n", fileName);
         return false;
     }
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_TEXTURE_WRAP_S);
-    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_TEXTURE_WRAP_S);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR_MIPMAP_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
-    glTexImage2D(GL_TEXTURE_2D, 0, channels, width, height, 0,
-        GL_RGB, GL_UNSIGNED_BYTE, img);
+    
+    // Determine the correct OpenGL format based on channels
+    GLenum format, internalFormat;
+    if (channels == 1) {
+        format = GL_RED;
+        internalFormat = GL_RED;
+    } else if (channels == 3) {
+        format = GL_RGB;
+        internalFormat = GL_RGB;
+    } else if (channels == 4) {
+        format = GL_RGBA;
+        internalFormat = GL_RGBA;
+    } else {
+        printf("Unsupported number of channels: %d in %s\n", channels, fileName);
+        stbi_image_free(img);
+        return false;
+    }
+    
+    glTexImage2D(GL_TEXTURE_2D, 0, internalFormat, width, height, 0, format, GL_UNSIGNED_BYTE, img);
     glGenerateMipmap(GL_TEXTURE_2D);
     stbi_image_free(img);
     return true;

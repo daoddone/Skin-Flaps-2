@@ -11,6 +11,8 @@
 #define GetCurrentDir _getcwd
 #else
 #include <unistd.h>
+#include <sys/stat.h>  // For mkdir on POSIX systems
+#include <cstdlib>     // For getenv
 #define GetCurrentDir getcwd
 #endif
 
@@ -152,11 +154,16 @@ public:
 			return;
 		}
 		float xpos = io.MousePos.x, ypos = io.MousePos.y;
+		
+		// Scale mouse coordinates for Retina displays
+		float scaledX = xpos * contentScaleX;
+		float scaledY = ypos * contentScaleY;
+		
 		if ( button == GLFW_MOUSE_BUTTON_RIGHT) {
 			if (action == GLFW_PRESS) {
 				buttonsDown |= 4;
 				std::string name; float position[3]; int triangle = 1;
-				igGl3w.pick((unsigned short)xpos, (unsigned short)ypos, name, position, triangle);
+				igGl3w.pick((unsigned short)scaledX, (unsigned short)scaledY, name, position, triangle);
 				if (!name.empty()) {
 					if (igSurgAct.rightMouseDown(name, position, triangle)) {
 						lastSurgX = (float)xpos;
@@ -171,7 +178,7 @@ public:
 				buttonsDown &= 0xfb;
 				if (surgicalDrag) {
 					std::string name; float position[3]; int triangle = 1;
-					igGl3w.pick((unsigned short)xpos, (unsigned short)ypos, name, position, triangle, true);
+					igGl3w.pick((unsigned short)scaledX, (unsigned short)scaledY, name, position, triangle, true);
 					igSurgAct.rightMouseUp(name, position, triangle);  // no longer matters how it returns
 					surgicalDrag = false;
 				}
@@ -180,7 +187,7 @@ public:
 				puts("Illegal right mouse button call");
 				exit(1);
 			}
-			igGl3w.mouseButtonEvent((unsigned short)xpos, (unsigned short)ypos, buttonsDown < 1 ? -1 : 2, false);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, buttonsDown < 1 ? -1 : 2, false);
 		}
 		else if (button == GLFW_MOUSE_BUTTON_LEFT) {
 			if (action == GLFW_PRESS)
@@ -188,7 +195,7 @@ public:
 			else if (action == GLFW_RELEASE)
 				buttonsDown &= 0xfe;
 			else ;
-			igGl3w.mouseButtonEvent((unsigned short)xpos, (unsigned short)ypos, buttonsDown < 1 ? -1 : 0, false);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, buttonsDown < 1 ? -1 : 0, false);
 		}
 		else if (button == GLFW_MOUSE_BUTTON_MIDDLE) {
 			if (action == GLFW_PRESS)
@@ -196,7 +203,7 @@ public:
 			else if (action == GLFW_RELEASE)
 				buttonsDown &= 0xfd;
 			else;
-			igGl3w.mouseButtonEvent((unsigned short)xpos, (unsigned short)ypos, buttonsDown < 1 ? -1 : 1, false);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, buttonsDown < 1 ? -1 : 1, false);
 		}
 		else {
 			puts("Illegal right mouse button call");
@@ -217,12 +224,17 @@ public:
 			xpos = 0.0;
 		if (ypos < 0.0)
 			ypos = 0.0;
+		
+		// Scale mouse coordinates for Retina displays
+		float scaledX = xpos * contentScaleX;
+		float scaledY = ypos * contentScaleY;
+		
 		if (buttonsDown < 1)
-			igGl3w.mouseButtonEvent((unsigned short)(xpos), (unsigned short)(ypos), -1, true);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, -1, true);
 		if (buttonsDown & 1)
-			igGl3w.mouseButtonEvent((unsigned short)(xpos), (unsigned short)(ypos), 0, true);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, 0, true);
 		if (buttonsDown &2)
-			igGl3w.mouseButtonEvent((unsigned short)(xpos), (unsigned short)(ypos), 1, true);
+			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, 1, true);
 		if (buttonsDown & 4) {
 			if (surgicalDrag && buttonsDown == 4) {  // buttonsDown == 4 and other buttons off
 				igSurgAct.mouseMotion(((float)xpos - lastSurgX) / windowWidth, (lastSurgY - (float)ypos) / windowHeight);
@@ -230,7 +242,7 @@ public:
 				lastSurgY = (float)ypos;
 			}
 			else
-				igGl3w.mouseButtonEvent((unsigned short)(xpos), (unsigned short)(ypos), 2, true);
+				igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, 2, true);
 		}
 	}
 
@@ -274,8 +286,14 @@ public:
 	{
 		windowWidth = width;
 		windowHeight = height;
+		
+		// Get framebuffer size and update content scale
+		glfwGetFramebufferSize(window, &framebufferWidth, &framebufferHeight);
+		contentScaleX = (float)framebufferWidth / (float)windowWidth;
+		contentScaleY = (float)framebufferHeight / (float)windowHeight;
+		
 		glfwSetWindowSize(window, width, height);
-		igGl3w.setViewport(0, 0, width, height);
+		igGl3w.setViewport(0, 0, framebufferWidth, framebufferHeight);
 	}
 
 	static void glfw_error_callback(int error, const char* description)
@@ -300,8 +318,17 @@ public:
 		glfwSetScrollCallback(FFwindow, mouse_wheel_callback);
 		glfwSetWindowSizeCallback(FFwindow, &window_size_callback);
 		glfwSetKeyCallback(FFwindow, &key_callback);
-		glfwGetFramebufferSize(FFwindow, &windowWidth, &windowHeight);
-		igGl3w.setViewport(0, 0, windowWidth, windowHeight);
+		
+		// Get both window and framebuffer sizes to calculate content scale
+		glfwGetWindowSize(FFwindow, &windowWidth, &windowHeight);
+		glfwGetFramebufferSize(FFwindow, &framebufferWidth, &framebufferHeight);
+		
+		// Calculate content scale for Retina displays
+		contentScaleX = (float)framebufferWidth / (float)windowWidth;
+		contentScaleY = (float)framebufferHeight / (float)windowHeight;
+		
+		// Viewport uses framebuffer size
+		igGl3w.setViewport(0, 0, framebufferWidth, framebufferHeight);
 		minFileDlgSize.x = windowWidth >> 1;
 		minFileDlgSize.y = windowHeight >> 1;
 		return true;
@@ -454,7 +481,15 @@ public:
 	static void showHourglass() {
 		// from: https ://github.com/ocornut/imgui/wiki/Image-Loading-and-Displaying-Examples#Example-for-OpenGL-users
 		physicsDrag = true;
+		
+		// Don't show hourglass until first frame is complete to avoid ImGui assertion
+		if (!firstFrameComplete)
+			return;
+			
 		if (hourglassTexture > 0xfffffffe) {
+			// Ensure model directory is set before loading texture
+			if (modelDirectory.empty())
+				setDefaultDirectories();
 			std::string str(modelDirectory);
 			str.append("Hourglass_2.jpg");
 			int image_width = 0;
@@ -497,89 +532,60 @@ public:
 		modelFile = modelFileName;
 	}
 
-	static std::wstring RegGetString(HKEY hKey, const std::wstring& subKey, const std::wstring& value)
+	// macOS preferences replacement for Windows Registry
+	static std::string GetMacOSPreference(const std::string& key)
 	{
-		DWORD dataSize{};
-		// First call to get dataSize
-		LONG retCode = ::RegGetValue(
-			hKey,
-			subKey.c_str(),
-			value.c_str(),
-			RRF_RT_REG_SZ,
-			nullptr,
-			nullptr,
-			&dataSize
-		);
-
-		if (retCode < ERROR_SUCCESS)
-		{
-			return std::wstring();
-		}
-
-		std::wstring data;
-		data.resize(dataSize / sizeof(wchar_t));
-
-		retCode = ::RegGetValue(
-			hKey,
-			subKey.c_str(),
-			value.c_str(),
-			RRF_RT_REG_SZ,
-			nullptr,
-			&data[0],
-			&dataSize
-		);
-
-		if (retCode != ERROR_SUCCESS)
-		{
-			return std::wstring();
-		}
-
-		DWORD stringLengthInWchars = dataSize / sizeof(wchar_t);
-		stringLengthInWchars--; // Exclude the NUL written by the Win32 API
-		data.resize(stringLengthInWchars);
-
-		return data;
+		// On macOS, we'll use user defaults (preferences) instead of registry
+		// For now, return empty string - preferences will be stored in application bundle
+		return std::string();
 	}
 
 
 	static void setDefaultDirectories() {
 		if (historyDirectory.empty() || modelDirectory.empty()) {
 			char buff[200];
-			HKEY hKey = HKEY_LOCAL_MACHINE;
-			std::wstring ret, subKey = L"SOFTWARE\\SkinFlaps", value = L"ModelDir";
-			ret = RegGetString(hKey, subKey, value);
-			if (!ret.empty()) {
-				size_t i;
-				wcstombs_s(&i, buff, (size_t)200, ret.c_str(), (size_t)199); // -1 so the appended NULL doesn't fall outside the allocated buffer
-				modelDirectory = buff;
+			
+			// Try to get preferences (currently returns empty)
+			std::string modelPref = GetMacOSPreference("ModelDir");
+			std::string historyPref = GetMacOSPreference("HistoryDir");
+			
+			if (!modelPref.empty()) {
+				modelDirectory = modelPref;
 			}
 			else
 				modelDirectory.clear();
-			subKey = L"SOFTWARE\\SkinFlaps", value = L"HistoryDir";
-			ret = RegGetString(hKey, subKey, value);
-			if (!ret.empty()) {
-				size_t i;
-				wcstombs_s(&i, buff, (size_t)200, ret.c_str(), (size_t)199); // -1 so the appended NULL doesn't fall outside the allocated buffer
-				historyDirectory = buff;
+				
+			if (!historyPref.empty()) {
+				historyDirectory = historyPref;
 			}
 			else
 				historyDirectory.clear();
+				
 			if (modelDirectory.empty() || historyDirectory.empty()) {
-				GetCurrentDir(buff, 200);
+				getcwd(buff, 200);  // Use POSIX getcwd instead of GetCurrentDir
 				modelDirectory.assign(buff);
-				size_t pos = modelDirectory.rfind("Build");
+				size_t pos = modelDirectory.rfind("build");  // lowercase for macOS
 				if (pos == std::string::npos) {  // not part of program build. Use install dir.
-					historyDirectory = "C:\\Users\\SkinFlaps";
-					modelDirectory = "C:\\ProgramData\\SkinFlaps";
+					// Use macOS-appropriate paths
+					const char* homeDir = getenv("HOME");
+					if (homeDir) {
+						historyDirectory = std::string(homeDir) + "/SkinFlaps";
+						modelDirectory = std::string(homeDir) + "/SkinFlaps";
+					} else {
+						historyDirectory = "/tmp/SkinFlaps";
+						modelDirectory = "/tmp/SkinFlaps";
+					}
 				}
 				else {  // doing program building and testing
-					std::string projectFolder = "SkinFlaps";
+					std::string projectFolder = "Court_Cutting_MD";  // Updated project folder name
 					pos = modelDirectory.rfind(projectFolder);
-					modelDirectory.erase(modelDirectory.begin() + pos + projectFolder.size(), modelDirectory.end());
-					historyDirectory = modelDirectory;
+					if (pos != std::string::npos) {
+						modelDirectory.erase(modelDirectory.begin() + pos + projectFolder.size(), modelDirectory.end());
+						historyDirectory = modelDirectory;
+					}
 				}
-				modelDirectory.append("\\Model\\");
-				historyDirectory.append("\\History\\");
+				modelDirectory.append("/Model/");  // Use forward slashes for macOS
+				historyDirectory.append("/History/");
 			}
 			igSurgAct.setModelDirectory(modelDirectory.c_str());
 			igSurgAct.setHistoryDirectory(historyDirectory.c_str());
@@ -600,7 +606,7 @@ public:
 				std::string r = historyDirectory, s;
 				s.assign(buf);
 				r += s;
-				if (mkdir(r.c_str()) != 0) {
+				if (mkdir(r.c_str(), 0755) != 0) {  // POSIX mkdir requires mode parameter
 					sendUserMessage("Sorry that directory either already exists,\nor could not be created.\n\nTry again-", "User subdirectory create failed-");
 				}
 				else {
@@ -788,7 +794,7 @@ public:
 						}
 						else {
 							historyDirectory = ImGuiFileDialog::Instance()->GetCurrentPath();
-							historyDirectory.append("\\");
+							historyDirectory.append("/");
 							historyFile = inFile;
 							std::string title("Skin Flaps Simulator playing - ");
 							title.append(historyFile);
@@ -805,7 +811,7 @@ public:
 					else {
 						assert(inFile.rfind("smd") < inFile.size());
 						modelDirectory = ImGuiFileDialog::Instance()->GetCurrentPath();
-						modelDirectory.append("\\");
+						modelDirectory.append("/");
 						modelFile = inFile;
 						std::string title("Skin Flaps Simulator Model is - ");
 						title.append(modelFile);
@@ -822,7 +828,7 @@ public:
 					std::string outFile = ImGuiFileDialog::Instance()->GetCurrentFileName();
 					if (outFile.rfind(".hst") < outFile.size()) {
 						historyDirectory = ImGuiFileDialog::Instance()->GetCurrentPath();
-						historyDirectory.append("\\");
+						historyDirectory.append("/");
 						historyFile = outFile;
 						std::string fullPath = historyDirectory;
 						fullPath.append(historyFile);
@@ -842,7 +848,7 @@ public:
 				}
 				else{  // find/create blend shape directory before saving blend shape file
 					objDirectory = ImGuiFileDialog::Instance()->GetCurrentPath();
-					objDirectory.append("\\");
+					objDirectory.append("/");
 					ImGuiFileDialog::Instance()->Close();
 					getFileName(objDirectory.c_str(), ".obj", objDirectory, false, false);
 					return;
@@ -866,6 +872,7 @@ public:
 	static GLFWwindow* FFwindow;
 	static int nextCounter;
 	static bool user_message_flag, physicsDrag, getTextInput;
+	static bool firstFrameComplete;
 
 private:
 	static bool powerHooks, showToolbox, viewPhysics, viewSurface, wheelZoom, except_thrown_flag;
@@ -874,6 +881,8 @@ private:
 	static unsigned char buttonsDown;
 	static bool surgicalDrag, ctrlShiftKeyDown;
 	static int windowWidth, windowHeight;
+	static int framebufferWidth, framebufferHeight;
+	static float contentScaleX, contentScaleY;
 	static ImVec2 minFileDlgSize;
 	static int FileDlgMode;
 	static GLuint hourglassTexture;

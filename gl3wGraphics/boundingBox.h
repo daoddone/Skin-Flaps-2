@@ -4,12 +4,11 @@
 // Purpose: 3D bounding box utility class
 //#####################################################################
 
-#ifndef __boundingBox__
-#define __boundingBox__
+#ifndef _BOUNDING_BOX_
+#define _BOUNDING_BOX_
 
-#include <math.h>
+#include <algorithm>  // For std::min and std::max
 #include <limits>
-#include <algorithm>
 #include <float.h>
 
 template<class T> class boundingBox
@@ -86,12 +85,7 @@ public:
 
     void Enlarge_To_Include_Point(const T (&point)[3])
 	{
-#ifdef NOMINMAX
-		xmin = std::min(xmin, point[0]);
-		xmax = std::max(xmax, point[0]); ymin = std::min(ymin, point[1]); ymax = std::max(ymax, point[1]); zmin = std::min(zmin, point[2]); zmax = std::max(zmax, point[2]);
-#else
-		xmin = min(xmin, point[0]); xmax = max(xmax, point[0]); ymin = min(ymin, point[1]); ymax = max(ymax, point[1]); zmin = min(zmin, point[2]); zmax = max(zmax, point[2]);
-#endif
+		xmin = std::min(xmin, point[0]); xmax = std::max(xmax, point[0]); ymin = std::min(ymin, point[1]); ymax = std::max(ymax, point[1]); zmin = std::min(zmin, point[2]); zmax = std::max(zmax, point[2]);
 	}
 
     void Enlarge_To_Include_Box(const boundingBox<T>& box)

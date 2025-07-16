@@ -42,15 +42,18 @@ using namespace gl;
 #endif
 
 bool FacialFlapsGui::powerHooks = false, FacialFlapsGui::showToolbox = true, FacialFlapsGui::viewPhysics = false, FacialFlapsGui::viewSurface = true,
-	FacialFlapsGui::wheelZoom = true, FacialFlapsGui::user_message_flag = false, FacialFlapsGui::except_thrown_flag = false, FacialFlapsGui::getTextInput = false;
+	FacialFlapsGui::wheelZoom = true, FacialFlapsGui::user_message_flag = false, FacialFlapsGui::except_thrown_flag = false, FacialFlapsGui::getTextInput = false, FacialFlapsGui::physicsDrag = false;
 int FacialFlapsGui::nextCounter = 0;
-int FacialFlapsGui::csgToolstate, FacialFlapsGui::FileDlgMode = 0;
+bool FacialFlapsGui::firstFrameComplete = false;
+int FacialFlapsGui::csgToolstate = 0, FacialFlapsGui::FileDlgMode = 0;
 std::string FacialFlapsGui::modelDirectory, FacialFlapsGui::historyDirectory, FacialFlapsGui::objDirectory, FacialFlapsGui::modelFile, FacialFlapsGui::historyFile, FacialFlapsGui::user_message, FacialFlapsGui::user_message_title;
 // std::string FacialFlapsGui::loadDir, FacialFlapsGui::loadFile;
-GLFWwindow* FacialFlapsGui::FFwindow;
-unsigned char FacialFlapsGui::buttonsDown;
-bool FacialFlapsGui::surgicalDrag, FacialFlapsGui::ctrlShiftKeyDown = false, FacialFlapsGui::physicsDrag = false;
+GLFWwindow* FacialFlapsGui::FFwindow = nullptr;
+unsigned char FacialFlapsGui::buttonsDown = 0;
+bool FacialFlapsGui::surgicalDrag = false, FacialFlapsGui::ctrlShiftKeyDown = false;
 int FacialFlapsGui::windowWidth, FacialFlapsGui::windowHeight;
+int FacialFlapsGui::framebufferWidth, FacialFlapsGui::framebufferHeight;
+float FacialFlapsGui::contentScaleX = 1.0f, FacialFlapsGui::contentScaleY = 1.0f;
 ImVec2 FacialFlapsGui::minFileDlgSize;
 GLuint FacialFlapsGui::hourglassTexture = 0xffffffff;
 int FacialFlapsGui::hourglassWidth, FacialFlapsGui::hourglassHeight;

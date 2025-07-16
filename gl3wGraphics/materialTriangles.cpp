@@ -22,6 +22,7 @@
 #include <string.h>
 #include <array>
 #include <sstream>
+#include <list>
 #include "materialTriangles.h"
 #include "math3d.h"
 #include "boundingBox.h"

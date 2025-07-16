@@ -127,5 +127,7 @@ void MergedLevelSet<VectorType>::addLevelSet(const std::string& collisionObjPath
 	delete levelset_surface;
 }
 
+namespace PhysBAM {
 template
 class MergedLevelSet<VECTOR<float, 3>>;
+}

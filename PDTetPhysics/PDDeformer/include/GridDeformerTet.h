@@ -59,7 +59,7 @@ namespace PhysBAM {
         using DiagonalMatrixType = DIAGONAL_MATRIX<T, d>;
         using NodeArrayType = typename IteratorType::template ContainerType<NodeType>;
 
-        using Tarch = typename SIMD_Numeric_Kernel::template SIMDArchitectureAVX2<T>;
+        using Tarch = typename SIMD_Numeric_Kernel::template SIMDArchitectureScalar<T>;
         static constexpr int BlockWidth = 16;
         static constexpr int Alignment = 64;
         using BlockedShapeMatrixType = T (*) [d+1][d][BlockWidth];

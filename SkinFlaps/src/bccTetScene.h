@@ -29,6 +29,7 @@ class bccTetScene
 {
 public:
 	bool loadScene(const char *dataDirectory, const char *sceneFileName);
+	void clearScene();  // Clean up current scene data
 	void createNewPhysicsLattice(int maxDimMegatetSubdivs, int nTetSizeLevels);
 	void updateOldPhysicsLattice();
 	inline void nonTetPhysicsUpdate() {_ptp.initializePhysics();}

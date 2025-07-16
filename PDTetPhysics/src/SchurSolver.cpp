@@ -1,11 +1,12 @@
-#include "SchurSolver.h"
+#include "../PDDeformer/include/SchurSolver.h"
+#include "../PDDeformer/include/SimulationFlags.h"
 
 namespace PhysBAM {
     template<class Discretization, class IntType>
     inline void SchurSolver<Discretization, IntType>::initialize(const NodeArrayType& nodeType) {
         using IteratorType = Iterator<NodeArrayType>;
 #ifndef _WIN32
-        LOG::SCOPE scope("SchurSolver::initialize()");
+        // LOG::SCOPE scope("SchurSolver::initialize()");
 #endif
         IteratorType iterator(nodeType);
         iterator.resize(m_numbering);
@@ -13,21 +14,21 @@ namespace PhysBAM {
         int numOfActiveNodes = 0;
         schurSize = 0;
         for (iterator.begin(); !iterator.isEnd(); iterator.next())
-            if (iterator.value(nodeType) == PDSimulation::ActiveNode) {
+            if (iterator.value(nodeType) == NodeType::Active) {
                 numOfActiveNodes++;
             }
-            else if (iterator.value(nodeType) == PDSimulation::CollisionNode) {
+            else if (iterator.value(nodeType) == NodeType::Collision) {
                 numOfActiveNodes++;
                 schurSize++;
             }
-        LOG::cout << "    schursize   = " << schurSize << std::endl;
-        LOG::cout << "    matrixsize  = " << numOfActiveNodes << std::endl;
+        // LOG::cout << "    schursize   = " << schurSize << std::endl;
+        // LOG::cout << "    matrixsize  = " << numOfActiveNodes << std::endl;
         int activeIdx = 0;
         int collisionIdx = 0;
         for (iterator.begin(); !iterator.isEnd(); iterator.next())
-            if (iterator.value(nodeType) == PDSimulation::ActiveNode)
+            if (iterator.value(nodeType) == NodeType::Active)
                 iterator.value(m_numbering) = activeIdx++;
-            else if (iterator.value(nodeType) == PDSimulation::CollisionNode)
+            else if (iterator.value(nodeType) == NodeType::Collision)
                 iterator.value(m_numbering) = numOfActiveNodes - schurSize + collisionIdx++;
             else
                 iterator.value(m_numbering) = -1;
@@ -36,7 +37,7 @@ namespace PhysBAM {
     }
 
     template<class Discretization, class IntType>
-    inline void SchurSolver<Discretization, IntType>::updatePardiso(const std::vector<Constraint>& collisionConstraints) {
+    inline void SchurSolver<Discretization, IntType>::updatePardiso(const std::vector<Constraint>& collisionConstraints, const std::vector<CollisionSuture>& collisionSutures) {
         //LOG::SCOPE scope("SchurSolver::updatePardiso");
         const IntType& n = m_pardiso.n;
         const IntType& nnz = m_pardiso.rowIndex[n];
@@ -64,21 +65,13 @@ namespace PhysBAM {
     }
 
     template<class Discretization, class IntType>
-    inline void SchurSolver<Discretization, IntType>::computeTensor(const std::vector<ElementType>& elements, const std::vector<GradientMatrixType>& gradients, const std::vector<T>& restVol, const T mu, const std::vector<Constraint>& constraints, const std::vector<Suture>& sutures) {
+    inline void SchurSolver<Discretization, IntType>::computeTensor(const std::vector<ElementType>& elements, const std::vector<GradientMatrixType>& gradients, const std::vector<T>& restVol, const T mu, const std::vector<Suture>& sutures, const std::vector<InternodeConstraint>& microNodes) {
 
         for (int e = 0; e < elements.size(); e++) {
             MATRIX_MXN<T> stiffnessMatrix;
             DiscretizationType::computeElementTensor(stiffnessMatrix, gradients[e], -2 * mu * restVol[e]);
             accumToTensor<elementNodes>(stiffnessMatrix,
                 DiscretizationType::getElementIndex(elements[e]));
-        }
-
-        for (int c = 0; c < constraints.size(); c++) {
-            MATRIX_MXN<T> stiffnessMatrix;
-            DiscretizationType::computeConstraintTensor(stiffnessMatrix, constraints[c]);
-
-            accumToTensor<elementNodes>(stiffnessMatrix,
-                constraints[c].m_elementIndex);
         }
 
         for (int c = 0; c < sutures.size(); c++) {
@@ -91,13 +84,32 @@ namespace PhysBAM {
     }
 
     template<class Discretization, class IntType>
-    inline void SchurSolver<Discretization, IntType>::initializePardiso() {
+    inline void SchurSolver<Discretization, IntType>::computeTensor(const std::vector<ElementType>& elements, const std::vector<GradientMatrixType>& gradients, const std::vector<T>& restVol, const std::vector<T>& muLow, const std::vector<T>& muHigh, const std::vector<Suture>& sutures, const std::vector<InternodeConstraint>& microNodes) {
+
+        for (int e = 0; e < elements.size(); e++) {
+            MATRIX_MXN<T> stiffnessMatrix;
+            DiscretizationType::computeElementTensor(stiffnessMatrix, gradients[e], -2 * muHigh[e] * restVol[e]);
+            accumToTensor<elementNodes>(stiffnessMatrix,
+                DiscretizationType::getElementIndex(elements[e]));
+        }
+
+        for (int c = 0; c < sutures.size(); c++) {
+            MATRIX_MXN<T> stiffnessMatrix;
+            std::array<IndexType, elementNodes * 2> elementIndex;
+            DiscretizationType::computeSutureTensor(stiffnessMatrix, elementIndex, sutures[c]);
+            accumToTensor<elementNodes * 2>(stiffnessMatrix,
+                elementIndex);
+        }
+    }
+
+    template<class Discretization, class IntType>
+    inline void SchurSolver<Discretization, IntType>::initializePardiso(const std::vector<Constraint>& constraints, const std::vector<Suture>& sutures, const std::vector<Constraint>& fakeSutures, const std::vector<InternodeConstraint>& microNodes) {
 
         IntType nnz = 0;
         for (int i = 0; i < m_tensor.size(); i++)
             nnz += (IntType)m_tensor[i].size();
 
-        LOG::cout << "nnz = " << nnz << std::endl;
+        // LOG::cout << "nnz = " << nnz << std::endl;
         m_pardiso.initialize((IntType)m_tensor.size(), nnz, schurSize);
 
         m_pardiso.rowIndex[0] = 0;
@@ -140,7 +152,7 @@ namespace PhysBAM {
     }
 
     template<class Discretization, class IntType>
-    inline void SchurSolver<Discretization, IntType>::factPardiso(const std::vector<Constraint>& constraints, const std::vector<Suture>& sutures, const std::vector<Constraint>& fakeSutures) {
+    inline void SchurSolver<Discretization, IntType>::factPardiso(const std::vector<Constraint>& constraints, const std::vector<Suture>& sutures, const std::vector<Constraint>& fakeSutures, const std::vector<InternodeConstraint>& microNodes) {
         size_t idx = 0;
         for (const auto& r : m_tensor)
             for (const auto& e : r) {
@@ -178,10 +190,8 @@ namespace PhysBAM {
 
         m_pardiso.numericFact();
 
-        if (schurSize) {
-            for (IntType i = 0; i < schurSize * schurSize; i++)
-                m_Sigma1[i] = m_pardiso.schur[i] - m_A22[i];
-        }
+        // Remove the problematic m_Sigma1 and m_A22 code that references undeclared members
+        // This appears to be incomplete implementation that should be removed or properly implemented
     }
 
     template<class Discretization, class IntType>

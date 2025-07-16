@@ -1,0 +1,14 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/christian/Court_Cutting_MD/build/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/gl3wGraphics/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/PhysBAM_subset/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/simd-numeric-kernels-new/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/PDTetPhysics/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/imgui_glfw_nfd_lib/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/imgui_glfw_nfd_lib/extLibs/gl3w/cmake_install.cmake",
+		"/Users/christian/Court_Cutting_MD/build/SkinFlaps/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

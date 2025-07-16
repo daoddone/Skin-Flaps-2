@@ -9,6 +9,7 @@
 #include "surgicalActions.h"
 #include <gl3wGraphics.h>
 #include "FacialFlapsGui.h"
+#include <iostream> // Added for debug output
 
 FacialFlapsGui ffg;
 
@@ -82,11 +83,15 @@ int main(int, char**)
 				else{
 				// below is from: https://www.intel.com/content/www/us/en/develop/documentation/onetbb-documentation/top/onetbb-developer-guide/design-patterns/gui-thread.html
 					if (bts->forcesApplied() && !bts->isPhysicsPaused()) {  // physicsDone recheck necessary since nextHistoryAction() may have spawned a task that this one would collide with
+						std::cout << "DEBUG: Triggering physics update - forcesApplied=" << bts->forcesApplied() 
+						          << ", physicsPaused=" << bts->isPhysicsPaused() << std::endl;
 						sa->physicsDone = false;
 						tbb::task_arena(tbb::task_arena::attach()).enqueue([&]() {
 							try {
+								std::cout << "DEBUG: Calling updatePhysics()" << std::endl;
 								bts->updatePhysics();
 								sa->physicsDone = true;
+								std::cout << "DEBUG: updatePhysics() completed" << std::endl;
 							}
 							catch (...) {
 								updateThrow = true;
@@ -96,11 +101,23 @@ int main(int, char**)
 							}
 						);
 					}
+					else {
+						static int debugCounter = 0;
+						if (debugCounter++ % 60 == 0) {  // Print every 60 frames (~1 second)
+							std::cout << "DEBUG: Physics not triggered - forcesApplied=" << bts->forcesApplied() 
+							          << ", physicsPaused=" << bts->isPhysicsPaused() 
+							          << ", physicsDone=" << sa->physicsDone << std::endl;
+						}
+					}
 				}
 			}
 			ffg.getgl3wGraphics()->drawAll();
 
 			ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());  // Always do this last so it prints GUI on top of your scene
+			
+			// Mark first frame as complete after successful render
+			if (!FacialFlapsGui::firstFrameComplete)
+				FacialFlapsGui::firstFrameComplete = true;
 		}
 		catch (const std::runtime_error& re) {
 			ffg.nextCounter = 0;

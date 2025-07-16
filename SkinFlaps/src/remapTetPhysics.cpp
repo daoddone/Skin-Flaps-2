@@ -1,6 +1,7 @@
 #include <assert.h>
 #include <set>
 #include <algorithm>
+#include <cfloat>  // For FLT_MAX
 #include "materialTriangles.h"
 #include "remapTetPhysics.h"
 
@@ -235,6 +236,18 @@ void remapTetPhysics::remapNewPhysicsNodePositions(vnBccTetrahedra *newVnbt)
 	_oldTets.clear();
 	_oldNodes.clear();
 	_oldTetHash.clear();
+}
+
+void remapTetPhysics::clear()
+{
+	_oldVnTetTris.clear();
+	_newVnTetTris.clear();
+	_oldNodePositions.clear();
+	_oldVertexTets.clear();
+	_oldTetCentroids.clear();
+	_oldTetHash.clear();
+	_oldTets.clear();
+	_oldNodes.clear();
 }
 
 remapTetPhysics::remapTetPhysics()

@@ -25,7 +25,7 @@ GLuint incisionLines::_incisionBufferObjects[2] = { 0xffffffff, 0xffffffff };
 GLuint incisionLines::_incisionVertexArrayBufferObject = 0xffffffff;
 
 
-const GLchar *surgGraphics::skinVertexShader = "#version 130 \n"
+const GLchar *surgGraphics::skinVertexShader = "#version 150 core\n"
 	"in vec4 vVertex;"
 	"in vec3 vNormal;"
 	"in vec3 vTangent;"
@@ -60,7 +60,7 @@ const GLchar *surgGraphics::skinVertexShader = "#version 130 \n"
 const GLchar *surgGraphics::skinFragmentShader =
 	// Adapted from Randi Rost and Bill Licea-Kane
 	// OpenGL Shading Language 3rd edition
-	"#version 130 \n"
+	"#version 150 core\n"
 
 	// next line only necessary in web_gl. Has been in openGL since 2.0
 //	"#extension GL_OES_standard_derivatives : enable"
@@ -295,19 +295,19 @@ bool surgGraphics::setTextureFilesCreateProgram(std::vector<int> &textureIds, co
 		_sn->bufferObjects.assign(5, 0);
 		glGenBuffers(5, &_sn->bufferObjects[0]);
 	}
-	// Vertex data
+	// Vertex data - allocate reasonable initial size (will be resized in setNewTopology)
 	glBindBuffer(GL_ARRAY_BUFFER, _sn->bufferObjects[0]);	// VERTEX_DATA
-	glBufferData(GL_ARRAY_BUFFER, 16, NULL, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 4 * 65536, NULL, GL_DYNAMIC_DRAW);  // 65K vertices * 4 floats
 	// Normal data
 	glBindBuffer(GL_ARRAY_BUFFER, _sn->bufferObjects[1]);	// NORMAL_DATA
-	glBufferData(GL_ARRAY_BUFFER, 12, NULL, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 3 * 65536, NULL, GL_DYNAMIC_DRAW);  // 65K normals * 3 floats
 	glBindBuffer(GL_ARRAY_BUFFER, _sn->bufferObjects[2]);	// TANGENT_DATA
-	glBufferData(GL_ARRAY_BUFFER, 12, NULL, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 3 * 65536, NULL, GL_DYNAMIC_DRAW);  // 65K tangents * 3 floats
 	// Texture coordinates
 	glBindBuffer(GL_ARRAY_BUFFER, _sn->bufferObjects[3]);	// TEXTURE_DATA
-	glBufferData(GL_ARRAY_BUFFER, 8, NULL, GL_DYNAMIC_DRAW);
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 2 * 65536, NULL, GL_DYNAMIC_DRAW);  // 65K texcoords * 2 floats
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, _sn->bufferObjects[4]);	// TRIANGLE INDEX_DATA
-	glBufferData(GL_ELEMENT_ARRAY_BUFFER, 12, NULL, GL_STATIC_DRAW);
+	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * 3 * 65536, NULL, GL_STATIC_DRAW);  // 65K triangles * 3 indices
 	if (_sn->vertexArrayBufferObject == 0xffffffff)
 		glGenVertexArrays(1,&_sn->vertexArrayBufferObject);
 	// now make vertex array
@@ -378,7 +378,7 @@ void surgGraphics::setNewTopology()
 	getTextureSeams();
 	// Vertex data
 	glBindBuffer(GL_ARRAY_BUFFER, _sn->bufferObjects[0]);	// VERTEX_DATA
-	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_xyz1.size(), NULL, GL_DYNAMIC_DRAW);  // &(_xyz1[0])
+	glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat)*_xyz1.size(), &(_xyz1[0]), GL_DYNAMIC_DRAW);
 	// Normal data
 	std::vector<GLfloat> tnVec;
 	tnVec.assign((_uv.size() >> 1) * 3, 0.0f);;
@@ -611,22 +611,22 @@ void surgGraphics::draw(void)
 	while (t < nTris){
 		int tMat = _mt.triangleMaterial(t);
 		if (tMat < 0){  // deleted triangle
-			end = (t << 1) + t;
+			end = t * 3;  // 3 indices per triangle
 			glDrawElements(GL_TRIANGLES, (GLsizei)(end - start), GL_UNSIGNED_INT, (const GLvoid*)(sizeof(GLuint)*start));
 			while (t<nTris && _mt.triangleMaterial(t) < 0)
 				++t;
-			start = (t << 1) + t;
+			start = t * 3;  // 3 indices per triangle
 			continue;
 		}
 		if (tMat != mat){
 			mat = tMat;
 			_gl3w->getLightsShaders()->setMaterial(mat);
-			start = (t<<1) + t;
+			start = t * 3;  // 3 indices per triangle
 			++t;
 		}
 		while (t<nTris && mat == _mt.triangleMaterial(t))
 			++t;
-		end = (t << 1) + t;
+		end = t * 3;  // 3 indices per triangle
 		glDrawElements(GL_TRIANGLES, (GLsizei)(end - start), GL_UNSIGNED_INT, (const GLvoid*)(sizeof(GLuint)*start));
 	}
 	glPolygonOffset(0.0, 0.0);

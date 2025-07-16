@@ -10,6 +10,7 @@
 #include <cctype>
 #include <stack>
 #include <cerrno>
+#include <strings.h>  // For strcasecmp on POSIX systems
 
 //#ifndef WIN32
 //#define _stricmp strcasecmp
@@ -38,10 +39,10 @@ static std::string Trim(const std::string& str)
 	std::string s = str;
 	
 	// remove white space in front
-	s.erase(s.begin(), std::find_if(s.begin(), s.end(), std::not1(std::ptr_fun<int, int>(std::isspace))));
+	s.erase(s.begin(), std::find_if(s.begin(), s.end(), [](int ch) { return !std::isspace(ch); }));
 	
 	// remove trailing white space
-	s.erase(std::find_if(s.rbegin(), s.rend(), std::not1(std::ptr_fun<int, int>(std::isspace))).base(), s.end());
+	s.erase(std::find_if(s.rbegin(), s.rend(), [](int ch) { return !std::isspace(ch); }).base(), s.end());
 	
 	return s;
 }
@@ -805,7 +806,7 @@ static Value DeserializeValue(std::string& str, bool* had_error, std::stack<Stac
 			}
 			else if ((str[i] == 'e') || (str[i] == 'E'))
 			{		
-				if ((_stricmp(temp_val.c_str(), "fals") != 0) && (_stricmp(temp_val.c_str(), "tru") != 0))
+				if ((strcasecmp(temp_val.c_str(), "fals") != 0) && (strcasecmp(temp_val.c_str(), "tru") != 0))
 				{
 					// it's not a boolean, check for scientific notation validity. This will also trap booleans with extra 'e' characters like falsee/truee
 					if (!found_digit)
@@ -864,9 +865,9 @@ static Value DeserializeValue(std::string& str, bool* had_error, std::stack<Stac
 		}
 
 		// store all floating point as doubles. This will also set the float and int values as well.
-		if (_stricmp(temp_val.c_str(), "true") == 0)
+					if (strcasecmp(temp_val.c_str(), "true") == 0)
 			v = Value(true);
-		else if (_stricmp(temp_val.c_str(), "false") == 0)
+		else if (strcasecmp(temp_val.c_str(), "false") == 0)
 			v = Value(false);
 		else if (has_e || has_dot)
 		{
@@ -882,7 +883,7 @@ static Value DeserializeValue(std::string& str, bool* had_error, std::stack<Stac
 
 			v = Value(d);
 		}
-		else if (_stricmp(temp_val.c_str(), "null") == 0)
+		else if (strcasecmp(temp_val.c_str(), "null") == 0)
 			v = Value();
 		else
 		{

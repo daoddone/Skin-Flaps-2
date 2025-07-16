@@ -4,7 +4,11 @@
 //#####################################################################
 #pragma once
 
+#ifdef __APPLE__
+#include <Accelerate/Accelerate.h>
+#else
 #include <mkl.h>
+#endif
 #include <array>
 
 #include "MKLWrapper.h"

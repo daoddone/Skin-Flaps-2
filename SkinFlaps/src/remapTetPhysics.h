@@ -18,6 +18,7 @@ public:
 	void remapNewPhysicsNodePositions(vnBccTetrahedra *newVnbt);  // done before new physics library made
 	inline void clearVnTetTris() { _newVnTetTris.clear(); }
 	inline void insertVnTetTris(int oldTet, std::vector<int> tris) {_newVnTetTris.insert(std::make_pair(oldTet, tris)); }
+	void clear();  // Clear all data
 	remapTetPhysics();
 	~remapTetPhysics();
 	

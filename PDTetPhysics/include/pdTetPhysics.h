@@ -140,6 +140,7 @@ public:
 
 		assert(fixedTets.size() == fixedWeights.size() && fixedWeights.size() == fixedPositions.size());
 		assert(peripheralTets.size() == peripheralWeights.size() && peripheralWeights.size() == peripheralPositions.size());
+		std::cout << "DEBUG: Setting " << fixedTets.size() << " fixed vertices and " << peripheralTets.size() << " peripheral vertices" << std::endl;
 		fixedTetConstraints.reserve(fixedTets.size() + peripheralTets.size());
 		int fts = fixedTets.size();
 		for (int i = 0; i < fts; i++) {
@@ -161,6 +162,9 @@ public:
 			number = m_solver.addConstraint(tet, reinterpret_cast<const T(&)[d]>(barycentricWeight), reinterpret_cast<const T(&)[d]>(hookPosition), m_hookWeight*200.0f, m_stressLimit*2000.0f);
 		else
 			number = m_solver.addConstraint(tet, reinterpret_cast<const T(&)[d]>(barycentricWeight), reinterpret_cast<const T(&)[d]>(hookPosition), m_hookWeight, m_stressLimit);
+		std::cout << "DEBUG: Added hook constraint #" << number << " to tet " << tet 
+		          << " at position (" << hookPosition[0] << ", " << hookPosition[1] << ", " << hookPosition[2] << ")"
+		          << " with weight " << (strong ? m_hookWeight*200.0f : m_hookWeight) << std::endl;
 //		initializePhysics();  // don't do this here.  Do in calling routine due to group initilization.
 		return number;
 	}
@@ -214,7 +218,10 @@ public:
 			// guard against init with no tet properties
 			if (!m_tetPropsSet)
 				throw std::logic_error("need to set tetProperties before initializePhysics");
+			// TEMPORARY: Skip collision object initialization on macOS to avoid Pardiso dependency
+			#ifndef __APPLE__
 			initializeCollisionObject(0.03f);
+			#endif
 			promoteAllSutures();
 			m_solver.initializeSolver();
 			m_solverInited = true;
@@ -253,6 +260,21 @@ public:
 	inline void promoteAllSutures() { m_solver.premoteSutures(); m_solverInited = false;}
 
 	inline void initializeCollisionObject(const T levelSetDx) { if (!m_levelsetInited) { m_solver.initializeLevelSet(levelSetDx); m_levelsetInited = true; } }
+
+	// Cleanup methods
+	inline void releaseSolver() { 
+		if (m_solverInited) {
+			m_solver.releaseSolver();
+			m_solverInited = false;
+		}
+	}
+	
+	inline void releaseDeformer() {
+		if (m_deformerInited) {
+			m_solver.releaseDeformer();
+			m_deformerInited = false;
+		}
+	}
 
 private:
 	// static variables as properties

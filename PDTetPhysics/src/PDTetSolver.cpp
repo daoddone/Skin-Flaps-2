@@ -38,7 +38,9 @@ int PDTetSolver<T, d>::addSuture(const int(&tets)[2], const T(&barycentricWeight
 	return (int)m_gridDeformer.m_sutures.size();
 #endif
 
-	typename DeformerType::Constraint c1{}, c2{};
+	typename DeformerType::Constraint c1, c2;
+	c1.m_xT = VectorType(d);
+	c2.m_xT = VectorType(d);
 
 	for (int v = 0; v < d + 1; v++) {
 		c1.m_elementIndex[v] = m_gridDeformer.m_elements[tets[0]][v];
@@ -67,6 +69,11 @@ void PDTetSolver<T, d>::initializeSolver()
 	m_gridDeformer.deallocateAuxiliaryStructures();
 	m_gridDeformer.initializeElementFlags();
 	m_gridDeformer.initializeAuxiliaryStructures();
+	
+	// Debug output to understand why collision solver is being used
+	std::cout << "DEBUG: m_collisionConstraints.size() = " << m_gridDeformer.m_collisionConstraints.size() << std::endl;
+	std::cout << "DEBUG: m_collisionSutures.size() = " << m_gridDeformer.m_collisionSutures.size() << std::endl;
+	
 	if (m_gridDeformer.m_collisionConstraints.size()||m_gridDeformer.m_collisionSutures.size()) {
 		hasCollision = true;
 #ifdef USE_CUDA
@@ -120,7 +127,8 @@ void PDTetSolver<T, d>::addCollisionProxies(const int * tets, const T (*weights)
 	//m_gridDeformer.m_collisionConstraints.resize(length);
 	// int offset = m_gridDeformer.m_collisionConstraints.size();
 	for (int i = 0; i < length; i++) {
-		typename DeformerType::Constraint constraint{};
+		typename DeformerType::Constraint constraint;
+		constraint.m_xT = VectorType(d);
 		constraint.m_weights[0] = T(1);
 		for (int v = 0; v < d + 1; v++) {
 			constraint.m_elementIndex[v] = m_gridDeformer.m_elements[tets[i]][v];
@@ -132,7 +140,7 @@ void PDTetSolver<T, d>::addCollisionProxies(const int * tets, const T (*weights)
 		}
 		constraint.m_stiffness = 0;
 		// set target to origin, this doesn't matter since stiffness is 0
-		constraint.m_xT = VectorType();
+		// constraint.m_xT is already initialized above
 		m_gridDeformer.m_collisionConstraints.push_back(constraint);
 	}
 	// IteratorType iterator(m_gridDeformer.m_X);
@@ -165,6 +173,7 @@ void PDTetSolver<T, d>::addSelfCollisionElements(const int* tets, size_t length)
 template<class T, int d>
 void PDTetSolver<T, d>::solve()
 {
+	std::cout << "DEBUG: PDTetSolver::solve() called" << std::endl;
 	using StateVariableType = typename DiscretizationType::StateVariableType;
 	using IteratorType = typename DeformerType::IteratorType;
 	using AlgebraType = PhysBAM::Algebra<StateVariableType>;
@@ -176,10 +185,22 @@ void PDTetSolver<T, d>::solve()
 	iterator.resize(delta_X);
 	iterator.resize(f);
 	
+	std::cout << "DEBUG: PDTetSolver - starting physics iteration" << std::endl;
 
 	m_gridDeformer.updatePositionBasedState(ElementFlag::unCollisionEl/*, m_rangeMin, m_rangeMax*/ ); // updateR1
 	m_gridDeformer.addElasticForce(f, ElementFlag::unCollisionEl /*, m_rangeMin, m_rangeMax, m_weightProportion */); //addR1Force
 	m_gridDeformer.addConstraintForce(f); //addConstraintForec
+
+	// Debug: Check if forces are non-zero
+	T totalForceMagnitude = 0;
+	for (int i = 0; i < f.size(); ++i) {
+		T mag = 0;
+		for (int dim = 1; dim <= 3; ++dim) {
+			mag += f[i](dim) * f[i](dim);
+		}
+		totalForceMagnitude += std::sqrt(mag);
+	}
+	std::cout << "DEBUG: Total force magnitude = " << totalForceMagnitude << std::endl;
 
 	if (hasCollision) {
 #ifdef USE_CUDA
@@ -294,6 +315,18 @@ void PDTetSolver<T, d>::solve()
 			m_solver_d.solve();
 			m_solver_d.copyOut(delta_X, v);
 		}
+		
+		// Debug: Check if delta_X is non-zero
+		T totalDeltaMagnitude = 0;
+		for (int i = 0; i < delta_X.size(); ++i) {
+			T mag = 0;
+			for (int dim = 1; dim <= 3; ++dim) {
+				mag += delta_X[i](dim) * delta_X[i](dim);
+			}
+			totalDeltaMagnitude += std::sqrt(mag);
+		}
+		std::cout << "DEBUG: Total delta_X magnitude = " << totalDeltaMagnitude << std::endl;
+		
 		AlgebraType::addTo(m_gridDeformer.m_X, delta_X);
 	}
 
@@ -320,8 +353,8 @@ void PDTetSolver<T, d>::premoteSutures()
 {
 	for (int i = 0; i < m_gridDeformer.m_fakeSutures.size(); i += 2) {
 		typename DeformerType::Suture suture{};
-		const DeformerType::Constraint& c1 = m_gridDeformer.m_fakeSutures[i];
-		const DeformerType::Constraint& c2 = m_gridDeformer.m_fakeSutures[i+1];
+		const typename DeformerType::Constraint& c1 = m_gridDeformer.m_fakeSutures[i];
+		const typename DeformerType::Constraint& c2 = m_gridDeformer.m_fakeSutures[i+1];
 		suture.m_elementIndex1 = c1.m_elementIndex;
 		suture.m_elementIndex2 = c2.m_elementIndex;
 		suture.m_weights1 = c1.m_weights;
@@ -363,7 +396,7 @@ void PDTetSolver<T, d>::updateCollisionConstraints()
 		T threshold = (T)1e-5;
 		for (int c = 0; c < m_gridDeformer.m_collisionConstraints.size(); c++) {
 			auto &constraint = m_gridDeformer.m_collisionConstraints[c];
-			VectorType pos = DiscretizationType::interpolateX(constraint.m_elementIndex, constraint.m_weights, m_gridDeformer.m_X);
+			VectorType pos = DiscretizationType::template interpolateX<DeformerType::elementNodes>(constraint.m_elementIndex, constraint.m_weights, m_gridDeformer.m_X);
 			T phi = m_levelSet->Extended_Phi(pos);
 			if (phi < -threshold) {
 				// std::cout << "phi " << phi << std::endl;
@@ -409,8 +442,8 @@ void PDTetSolver<T, d>::updateCollisionSutures(const int length, const int* topI
 
 			constraint.m_normal(v+1) = reshapedN[i][v];
 
-			VectorType pos1 = DiscretizationType::interpolateX(constraint.m_elementIndex1, constraint.m_weights1, m_gridDeformer.m_X);
-			VectorType pos2 = DiscretizationType::interpolateX(constraint.m_elementIndex2, constraint.m_weights2, m_gridDeformer.m_X);
+			VectorType pos1 = DiscretizationType::template interpolateX<DeformerType::elementNodes>(constraint.m_elementIndex1, constraint.m_weights1, m_gridDeformer.m_X);
+			VectorType pos2 = DiscretizationType::template interpolateX<DeformerType::elementNodes>(constraint.m_elementIndex2, constraint.m_weights2, m_gridDeformer.m_X);
 
 			std::set<int> ind_set;
 			bool dup = false;
@@ -623,7 +656,7 @@ int PDTetSolver<T, d>::addInterNodeConstraint(const int microNode, int nMacros, 
 template<class T, int d>
 int PDTetSolver<T, d>::addInterNodeConstraint(const int microNode, const int (&macroNodes)[d], const T(&barycentricWeight)[d],  const T stiffness) // COURT added 
 {
-	typename DeformerType::InternodeConstraint inC{};
+	typename DeformerType::InternodeConstraint inC;
 	inC.m_microNodeNumber = microNode;
 	inC.m_stiffness = stiffness;
 	for (int v = 0; v < d; v++)
@@ -718,7 +751,8 @@ int PDTetSolver<T, d>::addConstraint(const long tet, const T(&barycentricWeight)
 template<class T, int d>
 int PDTetSolver<T, d>::addConstraint(const int(&index)[d + 1], const T(&barycentricWeight)[d], const T(&hookPosition)[d], const T stiffness, T limit)
 {
-	typename DeformerType::Constraint constraint{};
+	typename DeformerType::Constraint constraint;
+	constraint.m_xT = VectorType(d);
 	constraint.m_weights[0] = T(1);
 	for (int v = 0; v < d + 1; v++)
 		constraint.m_elementIndex[v] = index[v];

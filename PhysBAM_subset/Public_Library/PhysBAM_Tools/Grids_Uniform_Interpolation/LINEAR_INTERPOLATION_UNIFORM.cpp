@@ -1,3 +1,4 @@
+#include <PhysBAM_Tools/Arrays/ARRAY.h>
 #include <PhysBAM_Tools/Grids_Uniform_Interpolation/FACE_LOOKUP_UNIFORM.h>
 #include <PhysBAM_Tools/Grids_Uniform_Interpolation/LINEAR_INTERPOLATION_UNIFORM_DEFINITIONS.h>
 #include <PhysBAM_Tools/Matrices/SYMMETRIC_MATRIX_2X2.h>

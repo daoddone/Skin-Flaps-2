@@ -181,4 +181,8 @@ void Add_Force(const T_DATA (&x_Blocked)[4][3],
 
 INSTANCE_KERNEL_SIMD_AVX_FLOAT( Add_Force, 16)
 INSTANCE_KERNEL_SIMD_MIC_FLOAT( Add_Force, 16)
+#ifdef __APPLE__
+// Add Apple Silicon / scalar architecture instantiation
+INSTANCE_KERNEL_SCALAR_FLOAT( Add_Force, 16)
+#endif
 #undef INSTANCE_KERNEL_Add_Force

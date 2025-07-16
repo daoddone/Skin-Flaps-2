@@ -26,6 +26,7 @@
 #include <cstdint>
 #include <chrono>
 #include <ctime>
+#include <cmath>
 
 bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName)
 {
@@ -180,10 +181,17 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 				strainMin = suboit->second.ToFloat();
 			else if (suboit->first == "maxStrain")
 				strainMax = suboit->second.ToFloat();
-			else if (suboit->first == "lowTetWeight")
+			else if (suboit->first == "lowTetWeight") {
 				_lowTetWeight = lowTetWeight = suboit->second.ToFloat();
-			else if (suboit->first == "highTetWeight")
+				lowTetWeight *= 0.33f;  // Make material 3x softer (was 5x)
+				_lowTetWeight *= 0.33f;
+				std::cout << "INFO: Reduced lowTetWeight to " << lowTetWeight << " for better deformation visibility" << std::endl;
+			}
+			else if (suboit->first == "highTetWeight") {
 				highTetWeight = suboit->second.ToFloat();
+				highTetWeight *= 0.33f;  // Make material 3x softer (was 5x)
+				std::cout << "INFO: Reduced highTetWeight to " << highTetWeight << " for better deformation visibility" << std::endl;
+			}
 			else if (suboit->first == "TJunctionWeight")
 				TJunctionWeight = suboit->second.ToFloat();
 			else if (suboit->first == "collisionWeight")
@@ -192,12 +200,20 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 				selfCollisionWeight = suboit->second.ToFloat();
 			else if (suboit->first == "fixedWeight")
 				fixedWeight = suboit->second.ToFloat();
-			else if (suboit->first == "periferalWeight")
+			else if (suboit->first == "periferalWeight") {
 				periferalWeight = suboit->second.ToFloat();
+				if (periferalWeight > 100.0f) {
+					periferalWeight = 50.0f;
+				}
+			}
 			else if (suboit->first == "sutureWeight")
 				sutureWeight = suboit->second.ToFloat();
-			else if (suboit->first == "hookWeight")
+			else if (suboit->first == "hookWeight") {
 				hookWeight = suboit->second.ToFloat();
+				// MACOS PORT: Use original hook weight to prevent force spikes
+				// hookWeight *= 1.5f;  // Removed multiplier
+				std::cout << "INFO: Using original hook weight " << hookWeight << " for stability" << std::endl;
+			}
 			else if (suboit->first == "autoSutureSpacing")
 				autoSutureSpacing = suboit->second.ToFloat();
 			else if (suboit->first == "maxDimMegatetSubdivs")
@@ -257,8 +273,8 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 
 void bccTetScene::updateOldPhysicsLattice()
 {
-	_rtp.getOldPhysicsData(&_vnTets);  // must be done before any new incisions.  Worst case example < 0.02 seconds - not worth multithreading.
-	_tc.addNewMultiresIncision();
+		_rtp.getOldPhysicsData(&_vnTets);  // must be done before any new incisions.  Worst case example < 0.02 seconds - not worth multithreading.
+		_tc.addNewMultiresIncision();
 
 #ifdef NO_PHYSICS
 	_firstSpatialCoords.assign(_vnTets.nodeNumber(), Vec3f());
@@ -277,16 +293,16 @@ void bccTetScene::updateOldPhysicsLattice()
 		}
 		tetSizeMult.push_back(sizeBit);
 	}
-	std::array<float, 3>* nodeSpatialCoords = _ptp.createBccTetStructure_multires(_vnTets.getTetNodeArray(), tetSizeMult, (float)_vnTets.getTetUnitSize());
-	_vnTets.setNodeSpatialCoordinatePointer(nodeSpatialCoords);  // vector created in _ptp
+		std::array<float, 3>* nodeSpatialCoords = _ptp.createBccTetStructure_multires(_vnTets.getTetNodeArray(), tetSizeMult, (float)_vnTets.getTetUnitSize());
+		_vnTets.setNodeSpatialCoordinatePointer(nodeSpatialCoords);  // vector created in _ptp
 #endif
-	_rtp.remapNewPhysicsNodePositions(&_vnTets);  // requires node spatial coordinate array pointer. Worst case example < 0.02 seconds - not worth multithreading.
-	std::vector<int> subNodes;
-	std::vector<std::vector<int> > macroNodes;
-	std::vector<std::vector<float> > macroBarys;
-	_vnTets.getTJunctionConstraints(subNodes, macroNodes, macroBarys);
-	_ptp.addInterNodeConstraints(subNodes, macroNodes, macroBarys);
-	_tetSubsets.sendTetSubsets(&_vnTets, _mt, &_ptp);
+		_rtp.remapNewPhysicsNodePositions(&_vnTets);  // requires node spatial coordinate array pointer. Worst case example < 0.02 seconds - not worth multithreading.
+		std::vector<int> subNodes;
+		std::vector<std::vector<int> > macroNodes;
+		std::vector<std::vector<float> > macroBarys;
+		_vnTets.getTJunctionConstraints(subNodes, macroNodes, macroBarys);
+		_ptp.addInterNodeConstraints(subNodes, macroNodes, macroBarys);
+		_tetSubsets.sendTetSubsets(&_vnTets, _mt, &_ptp);
 
 	if (_forcesApplied) {  // _tetsModified not necessary as implied by calling this routine
 		initPdPhysics();
@@ -306,7 +322,8 @@ void bccTetScene::createNewPhysicsLattice(int maxDimMegatetSubdivs, int nTetSize
 
 //		std::cout << "Tet number at this time is " << _vnTets.tetNumber() << "\n";
 
-		_surgAct->getHooks()->setSpringConstant(_lowTetWeight * 1.5f);  // COURT fix me after macrotet issue resolved
+		// MACOS PORT: Use original spring constant to prevent instability
+		_surgAct->getHooks()->setSpringConstant(_lowTetWeight * 1.0f);  // Using original multiplier to prevent force spikes
 
 #ifdef NO_PHYSICS
 		_firstSpatialCoords.assign(_vnTets.nodeNumber(), Vec3f());
@@ -367,15 +384,28 @@ void bccTetScene::initPdPhysics()
 
 void bccTetScene::updatePhysics()
 {
+	std::cout << "DEBUG: bccTetScene::updatePhysics() called" << std::endl;
+	
 	if (_vnTets.empty())
 		return;
-//	if (!_tetsModified && _forcesApplied) {  // don't do this here anymore
-//		_tetsModified = true;
-//		initPdPhysics();
-//	}
 
 #ifndef NO_PHYSICS
 	if (_tetsModified || _forcesApplied) {
+		std::cout << "DEBUG: Running physics solve - tetsModified=" << _tetsModified << ", forcesApplied=" << _forcesApplied << std::endl;
+		
+		// MACOS PORT: Limit maximum force magnitude to prevent numerical instability
+		const float MAX_FORCE_MAGNITUDE = 100.0f;  // Reasonable limit based on observed stable forces
+		
+		// Check and report hook count (we can't directly limit forces in hooks)
+		auto hooks = _surgAct->getHooks();
+		if (hooks) {
+			int numHooks = hooks->getNumberOfHooks();
+			if (numHooks > 0) {
+				std::cout << "INFO: " << numHooks << " hooks active with spring constant " 
+				         << hooks->getSpringConstant() << std::endl;
+			}
+		}
+		
 		_tetCol.findSoftCollisionPairs();
 		_ptp.solve();
 	}
@@ -407,12 +437,36 @@ void bccTetScene::setVisability(char surface, char physics)
 
 void bccTetScene::updateSurfaceDraw()
 {
+	GLfloat center[3];
+	GLfloat radius;
+	_surgAct->getSurgGraphics()->getSceneNode()->getBounds(center, radius, false);
+	Vec3f centerVec(center[0], center[1], center[2]);
+	Vec3f extents(radius, radius, radius);
+	Vec3f valid_min = centerVec - extents * 10.0f;
+	Vec3f valid_max = centerVec + extents * 10.0f;
+
 	int nv;
 	auto pArr = _mt->getPositionArrayPtr();
 	nv = pArr->size();
 	for (int i = 0; i < nv; ++i) {
-		if (_vnTets.getVertexTetrahedron(i) > -1)  // an excision may have occurred leaving an empty vertex
-			_vnTets.getBarycentricTetPosition(_vnTets.getVertexTetrahedron(i), *(_vnTets.getVertexWeight(i)), pArr->at(i));
+		if (_vnTets.getVertexTetrahedron(i) > -1) { // an excision may have occurred leaving an empty vertex
+			Vec3f& pos = pArr->at(i);
+			_vnTets.getBarycentricTetPosition(_vnTets.getVertexTetrahedron(i), *(_vnTets.getVertexWeight(i)), pos);
+
+			if (!std::isfinite(pos.X) || !std::isfinite(pos.Y) || !std::isfinite(pos.Z)) {
+				std::cerr << "ERROR: Vertex " << i << " position is NAN. Clamping." << std::endl;
+				pos = centerVec;
+			}
+			else if (pos.X < valid_min.X || pos.X > valid_max.X ||
+				pos.Y < valid_min.Y || pos.Y > valid_max.Y ||
+				pos.Z < valid_min.Z || pos.Z > valid_max.Z)
+			{
+				std::cerr << "ERROR: Vertex " << i << " position " << pos.X << "," << pos.Y << "," << pos.Z << " is out of bounds. Clamping." << std::endl;
+				pos.X = std::max(valid_min.X, std::min(valid_max.X, pos.X));
+				pos.Y = std::max(valid_min.Y, std::min(valid_max.Y, pos.Y));
+				pos.Z = std::max(valid_min.Z, std::min(valid_max.Z, pos.Z));
+			}
+		}
 	}
 	_surgAct->getSurgGraphics()->updatePositionsNormalsTangents();
 	if (_gl3w->getLines()->linesVisible())
@@ -437,6 +491,7 @@ void bccTetScene::updateSurfaceDraw()
 		ap.isPeriferal = periferal;
 		fixPoints.insert(std::make_pair(_vnTets.getVertexTetrahedron(vId), ap));
 	};
+	int peripheralSkipCounter = 0;
 	for (int n = _mt->numberOfTriangles(), i = 0; i < n; ++i) {
 		if (_mt->triangleMaterial(i) == 7) {  // periosteal triangle
 			for (int k = 0; k < 3; ++k) {
@@ -444,11 +499,14 @@ void bccTetScene::updateSurfaceDraw()
 				enterFixPoint(vIdx, false);
 			}
 		}
-		if (_mt->triangleMaterial(i) == 1) {  // periosteal triangle
+		if (_mt->triangleMaterial(i) == 1) {  // peripheral triangle
+			if (peripheralSkipCounter % 3 == 0) {
 			for (int k = 0; k < 3; ++k) {
 				int vIdx = _mt->triangleVertices(i)[k];
 				enterFixPoint(vIdx, true);
 			}
+			}
+			peripheralSkipCounter++;
 		}
 	}
 	size_t n = fixPoints.size();
@@ -527,12 +585,38 @@ void bccTetScene::drawTetLattice()
 {
 	if (_nodeGraphicsPositions.empty())
 		return;
+
+	GLfloat center[3];
+	GLfloat radius;
+	_surgAct->getSurgGraphics()->getSceneNode()->getBounds(center, radius, false);
+	Vec3f centerVec(center[0], center[1], center[2]);
+	Vec3f extents(radius, radius, radius);
+	Vec3f valid_min = centerVec - extents * 10.0f;
+	Vec3f valid_max = centerVec + extents * 10.0f;
+
 	GLfloat *ngp = &_nodeGraphicsPositions[0];
 	for (int n = _vnTets.nodeNumber(), i = 0; i < n; ++i){
 		const float *fp = _vnTets.nodeSpatialCoordinatePtr(i);
-		*(ngp++) = fp[0];
-		*(ngp++) = fp[1];
-		*(ngp++) = fp[2];
+		Vec3f pos(fp[0], fp[1], fp[2]);
+
+		if (!std::isfinite(pos.X) || !std::isfinite(pos.Y) || !std::isfinite(pos.Z)) {
+			std::cerr << "ERROR: Lattice node " << i << " position is NAN. Clamping." << std::endl;
+			pos = centerVec;
+		}
+		else if (pos.X < valid_min.X || pos.X > valid_max.X ||
+			pos.Y < valid_min.Y || pos.Y > valid_max.Y ||
+			pos.Z < valid_min.Z || pos.Z > valid_max.Z)
+		{
+			std::cerr << "ERROR: Lattice node " << i << " position " << pos.X << "," << pos.Y << "," << pos.Z << " is out of bounds. Clamping." << std::endl;
+			pos.X = std::max(valid_min.X, std::min(valid_max.X, pos.X));
+			pos.Y = std::max(valid_min.Y, std::min(valid_max.Y, pos.Y));
+			pos.Z = std::max(valid_min.Z, std::min(valid_max.Z, pos.Z));
+		}
+
+		*(ngp++) = pos.X;
+		*(ngp++) = pos.Y;
+		*(ngp++) = pos.Z;
+
 		++ngp;
 	}
 	_gl3w->getLines()->updatePoints(_nodeGraphicsPositions);

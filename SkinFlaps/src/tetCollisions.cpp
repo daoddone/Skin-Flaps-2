@@ -104,13 +104,22 @@ void tetCollisions::initSoftCollisions(materialTriangles* mt, vnBccTetrahedra* v
 	// _bedRay crossover ignored since will only use shortest one
 	tets.erase(-1);
  	if (!tets.empty()) {
+		// TEMPORARY: Disable soft collision on macOS to avoid Pardiso dependency
+		#ifndef __APPLE__
 		std::vector<int> tetras;
 		tetras.assign(tets.begin(), tets.end());
 		_ptp->addSoftCollisionTets(tetras);
+		#endif
 	}
 }
 
 void tetCollisions::findSoftCollisionPairs() {
+	// TEMPORARY: Disable soft collision on macOS to avoid Pardiso dependency
+	#ifdef __APPLE__
+	_ptp->clearSoftCollisions();
+	return;
+	#endif
+	
 	if (_flapBotTris.empty())
 		return;
 
@@ -250,6 +259,8 @@ void tetCollisions::addFixedCollisionSet(const std::string& levelSetFile, std::v
 void tetCollisions::updateFixedCollisions(materialTriangles *mt, vnBccTetrahedra *vnt) {  // call after every topo change
 	_mt = mt;
 	_vnt = vnt;
+	// TEMPORARY: Disable fixed collision on macOS to avoid Pardiso dependency
+	#ifndef __APPLE__
 	for (auto& fc : _fixedCollisionSets) {
 		std::vector<int> tets;
 		std::vector<std::array<float, 3> > weights;
@@ -266,6 +277,7 @@ void tetCollisions::updateFixedCollisions(materialTriangles *mt, vnBccTetrahedra
 		}
 		_ptp->addFixedCollisionSet(fc.levelSetFilename, tets, weights);
 	}
+	#endif
 }
 
 float tetCollisions::rayDepth(const Vec3f &vtx, const Vec3f &nrm) {  // depth of a ray from vertex to nearest deep surface
