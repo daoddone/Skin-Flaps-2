@@ -298,6 +298,7 @@ The main barriers to macOS compatibility are:
 - Next steps: Verify that hook dragging now responds after undermining.
 - Blockers: None
 
+
 ---
 
 ## Technical Notes
