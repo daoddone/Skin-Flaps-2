@@ -85,6 +85,8 @@ bool hooks::setHookPosition(unsigned int hookNumber, float(&hookPos)[3])
         else  // physics not activated yet or lattice changed
         {
                 // MACOS PORT: gracefully handle missing hook constraint by re-adding it
+                // Recompute parametric location in case the surface changed
+                hit->second._tri->getBarycentricProjection(hit->second.triangle, hit->second.xyz.xyz, hit->second.uv);
                 Vec3f gridLocus, bw;
                 int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
                 if (tetIdx < 0)
@@ -171,6 +173,7 @@ bool hooks::updateHookPhysics(){
 			continue;
 		}
 		Vec3f gridLocus, bw;
+                hit->second._tri->getBarycentricProjection(hit->second.triangle, hit->second.xyz.xyz, hit->second.uv);
 		int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
 		if (tetIdx < 0){
 			--_hookNow;
