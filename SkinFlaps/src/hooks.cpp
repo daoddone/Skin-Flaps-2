@@ -80,10 +80,18 @@ bool hooks::setHookPosition(unsigned int hookNumber, float(&hookPos)[3])
 		return false;
 	hit->second.xyz = (Vec3f)hookPos;
 #ifndef NO_PHYSICS
-	if(hit->second._constraintId > -1)
-		_ptp->moveHook(hit->second._constraintId, reinterpret_cast< const std::array<float, 3>(&) >(hit->second.xyz));
-	else  // physics not activated yet
-		throw(std::logic_error("Attempting to move a hook without physics activation.\n"));
+        if(hit->second._constraintId > -1)
+                _ptp->moveHook(hit->second._constraintId, reinterpret_cast< const std::array<float, 3>(&) >(hit->second.xyz));
+        else  // physics not activated yet or lattice changed
+        {
+                // MACOS PORT: gracefully handle missing hook constraint by re-adding it
+                Vec3f gridLocus, bw;
+                int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
+                if (tetIdx < 0)
+                        throw(std::logic_error("Attempting to move a hook without valid tet location.\n"));
+                _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+                hit->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(hit->second.xyz), hit->second._strong);
+        }
 #endif
 	GLfloat *mvm = hit->second._shape->getModelViewMatrix();
 	mvm[12] = hookPos[0];
