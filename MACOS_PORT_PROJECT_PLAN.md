@@ -316,6 +316,7 @@ The main barriers to macOS compatibility are:
 - Next steps: Test hook dragging after undermining to ensure crash free operation.
 - Blockers: None
 
+
 **[2025-07-22]** - [OpenAI Codex]
 - Task completed: Added fallback logic to relocate hooks when their original triangle is removed. Hooks now search nearby triangles or reuse the previous tet when possible.
 - Files modified: `SkinFlaps/src/hooks.cpp`, `MACOS_PORT_PROJECT_PLAN.md`
