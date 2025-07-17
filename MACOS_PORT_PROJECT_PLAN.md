@@ -304,6 +304,12 @@ The main barriers to macOS compatibility are:
 - Next steps: Rebuild and validate hook drag across cut regions.
 - Blockers: None
 
+**[2025-07-20]** - [OpenAI Codex]
+- Task completed: Simplified hook movement logic and only recreate constraints when missing. Updated cmake attempts.
+- Files modified: `SkinFlaps/src/hooks.cpp`, `MACOS_PORT_PROJECT_PLAN.md`
+- Next steps: Confirm hook dragging works after cuts and undermines.
+- Blockers: Missing MKL package preventing full build
+
 
 ---
 
