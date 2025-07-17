@@ -298,6 +298,12 @@ The main barriers to macOS compatibility are:
 - Next steps: Verify that hook dragging now responds after undermining.
 - Blockers: None
 
+**[2025-07-19]** - [OpenAI Codex]
+- Task completed: Added per-hook tet tracking and automatic constraint reattachment when moving across tets to prevent freezes.
+- Files modified: `SkinFlaps/src/hooks.cpp`, `SkinFlaps/src/hooks.h`, `MACOS_PORT_PROJECT_PLAN.md`
+- Next steps: Rebuild and validate hook drag across cut regions.
+- Blockers: None
+
 
 ---
 
