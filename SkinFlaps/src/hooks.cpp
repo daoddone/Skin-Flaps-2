@@ -75,21 +75,39 @@ bool hooks::getHookPosition(unsigned int hookNumber, float(&hookPos)[3])
 
 bool hooks::setHookPosition(unsigned int hookNumber, float(&hookPos)[3])
 {
-	HOOKMAP::iterator hit = _hooks.find(hookNumber);
-	if(hit==_hooks.end())
-		return false;
-	hit->second.xyz = (Vec3f)hookPos;
+        HOOKMAP::iterator hit = _hooks.find(hookNumber);
+        if(hit==_hooks.end())
+                return false;
+
+        hit->second.xyz = (Vec3f)hookPos;
 #ifndef NO_PHYSICS
-	if(hit->second._constraintId > -1)
-		_ptp->moveHook(hit->second._constraintId, reinterpret_cast< const std::array<float, 3>(&) >(hit->second.xyz));
-	else  // physics not activated yet
-		throw(std::logic_error("Attempting to move a hook without physics activation.\n"));
+        // recompute barycentric coordinates of the hook on its surface triangle
+        hit->second._tri->getBarycentricProjection(hit->second.triangle, hit->second.xyz.xyz, hit->second.uv);
+        Vec3f gridLocus, bw;
+        int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
+        if (tetIdx < 0)
+                throw(std::logic_error("Attempting to move a hook without valid tet location.\n"));
+        _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+
+        if(hit->second._constraintId < 0) {
+                // physics lattice was reinitialized, recreate constraint
+                hit->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(hit->second.xyz), hit->second._strong);
+        } else if(tetIdx != hit->second._tetIndex) {
+                // hook moved into a new tet - remove old constraint and create a new one
+                _ptp->deleteHook(hit->second._constraintId);
+                hit->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(hit->second.xyz), hit->second._strong);
+        } else {
+                // same tet - move existing constraint
+                _ptp->moveHook(hit->second._constraintId, reinterpret_cast< const std::array<float, 3>(&) >(hit->second.xyz));
+        }
+
+        hit->second._tetIndex = tetIdx;
 #endif
-	GLfloat *mvm = hit->second._shape->getModelViewMatrix();
-	mvm[12] = hookPos[0];
-	mvm[13] = hookPos[1];
-	mvm[14] = hookPos[2];
-	return true;
+        GLfloat *mvm = hit->second._shape->getModelViewMatrix();
+        mvm[12] = hookPos[0];
+        mvm[13] = hookPos[1];
+        mvm[14] = hookPos[2];
+        return true;
 }
 
 int hooks::addHook(materialTriangles *tri, int triangle, float(&uv)[2], bool tiny)
@@ -131,25 +149,26 @@ int hooks::addHook(materialTriangles *tri, int triangle, float(&uv)[2], bool tin
 	}
 	axisAngleRotateMatrix4x4(om, axis.xyz, angle);
 	translateMatrix4x4(om,xyz[0],xyz[1],xyz[2]);
-	Vec3f gridLocus, bw;
-	if (_vnt->getMaterialTriangles() != nullptr && _ptp->solverInitialized()) {  // COURT - won't need second condition
-		int tetIdx = _vnt->parametricTriangleTet(triangle, uv, gridLocus);
-		if (tetIdx < 0){
-			--_hookNow;
-			deleteHook(_hookNow);
-			return -1;
-		}
-		_vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+        Vec3f gridLocus, bw;
+        if (_vnt->getMaterialTriangles() != nullptr && _ptp->solverInitialized()) {  // COURT - won't need second condition
+                int tetIdx = _vnt->parametricTriangleTet(triangle, uv, gridLocus);
+                if (tetIdx < 0){
+                        --_hookNow;
+                        deleteHook(_hookNow);
+                        return -1;
+                }
+                _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
 #ifndef NO_PHYSICS
-		hpr.first->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(xyz), tiny);
-		if (!_groupPhysicsInit)
-			_ptp->initializePhysics();
+                hpr.first->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(xyz), tiny);
+                if (!_groupPhysicsInit)
+                        _ptp->initializePhysics();
 #else
-		hpr.first->second._constraintId = -1;  // signal that this is a dummy hook that needs a constraint later
+                hpr.first->second._constraintId = -1;  // signal that this is a dummy hook that needs a constraint later
 #endif
-	}
-	else
-		hpr.first->second._constraintId = -1;  // signal that this is a dummy hook that needs a constraint later
+                hpr.first->second._tetIndex = tetIdx;
+        }
+        else
+                hpr.first->second._constraintId = -1;  // signal that this is a dummy hook that needs a constraint later
 	return _hookNow - 1;
 }
 
@@ -163,6 +182,7 @@ bool hooks::updateHookPhysics(){
 			continue;
 		}
 		Vec3f gridLocus, bw;
+                hit->second._tri->getBarycentricProjection(hit->second.triangle, hit->second.xyz.xyz, hit->second.uv);
 		int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
 		if (tetIdx < 0){
 			--_hookNow;
@@ -170,9 +190,10 @@ bool hooks::updateHookPhysics(){
 			deleteHook(_hookNow);
 			continue;
 		}
-		_vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+                _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
 #ifndef NO_PHYSICS
-		hit->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(hit->second.xyz), hit->second._strong);
+                hit->second._constraintId = _ptp->addHook(tetIdx, reinterpret_cast<const std::array<float, 3>&>(bw), reinterpret_cast<const std::array<float, 3>&>(hit->second.xyz), hit->second._strong);
+                hit->second._tetIndex = tetIdx;
 #endif
 		++hit;
 	}
