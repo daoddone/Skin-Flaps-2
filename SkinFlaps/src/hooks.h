@@ -25,7 +25,7 @@ class hookConstraint
 public:
 	inline void setShape(std::shared_ptr<sceneNode> &shape) {_shape=shape;}
 	inline std::shared_ptr<sceneNode>  getShape() {return _shape;}
-	hookConstraint() : _shape(nullptr), _constraintId(-1) {}
+        hookConstraint() : _shape(nullptr), _constraintId(-1), _tetIndex(-1) {}
 	~hookConstraint() {}
 protected:
 	materialTriangles *_tri;
@@ -33,8 +33,9 @@ protected:
 	float uv[2];
 	Vec3f xyz, _selectPosition;  // xyz is current hook position
 	bool _selected, _strong;
-	std::shared_ptr<sceneNode> _shape;
-	int _constraintId;
+        std::shared_ptr<sceneNode> _shape;
+        int _constraintId;
+        int _tetIndex;
 	friend class hooks;
 };
 

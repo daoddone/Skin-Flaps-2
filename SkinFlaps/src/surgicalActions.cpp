@@ -883,8 +883,9 @@ bool surgicalActions::mouseMotion(float dScreenX, float dScreenY)
 			return false;
 		}
 		
-		// MACOS PORT: Limit maximum displacement to prevent force spikes
-		const float MAX_DISPLACEMENT = 0.0005f;  // Limit to 0.5mm per frame (reduced from 2mm)
+                // MACOS PORT: Limit maximum displacement to prevent force spikes
+                // Allow slightly larger movements to make hook dragging visible
+                const float MAX_DISPLACEMENT = 0.002f;  // Limit to 2mm per frame
 		float displacement = sqrt(dv.xyz[0]*dv.xyz[0] + dv.xyz[1]*dv.xyz[1] + dv.xyz[2]*dv.xyz[2]);
 		if (displacement > MAX_DISPLACEMENT) {
 			float scale = MAX_DISPLACEMENT / displacement;
