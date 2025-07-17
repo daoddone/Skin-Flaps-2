@@ -310,6 +310,7 @@ The main barriers to macOS compatibility are:
 - Next steps: Confirm hook dragging works after cuts and undermines.
 - Blockers: Missing MKL package preventing full build
 
+
 **[2025-07-21]** - [OpenAI Codex]
 - Task completed: Detect when a hook crosses into a new tetrahedron and recreate the constraint automatically to maintain stable dragging.
 - Files modified: `SkinFlaps/src/hooks.cpp`, `MACOS_PORT_PROJECT_PLAN.md`
