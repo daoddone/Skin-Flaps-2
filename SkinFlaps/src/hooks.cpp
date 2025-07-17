@@ -10,6 +10,7 @@
 #include "Vec3f.h"
 #include "vnBccTetrahedra.h"
 #include <assert.h>
+#include <iostream>
 #ifdef linux
 #include <stdio.h>
 #endif
@@ -85,9 +86,37 @@ bool hooks::setHookPosition(unsigned int hookNumber, float(&hookPos)[3])
         hit->second._tri->getBarycentricProjection(hit->second.triangle, hit->second.xyz.xyz, hit->second.uv);
         Vec3f gridLocus, bw;
         int tetIdx = _vnt->parametricTriangleTet(hit->second.triangle, hit->second.uv, gridLocus);
-        if (tetIdx < 0)
-                throw(std::logic_error("Attempting to move a hook without valid tet location.\n"));
-        _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+        if (tetIdx < 0) {
+                // triangle may have been removed by cutting/undermining
+                // attempt to keep using previous tet if new position still lies inside it
+                Vec3f guessGrid;
+                _vnt->spatialToGridCoords(hit->second.xyz, guessGrid);
+                auto prevTc = _vnt->tetCentroid(hit->second._tetIndex);
+                if (_vnt->insideTet(prevTc, guessGrid)) {
+                        gridLocus = guessGrid;
+                        _vnt->gridLocusToBarycentricWeight(gridLocus, prevTc, bw);
+                        tetIdx = hit->second._tetIndex;
+                } else {
+                        int closeTri = -1;
+                        float closeUV[2];
+                        hit->second._tri->closestPoint(hit->second.xyz.xyz, closeTri, closeUV);
+                        if (closeTri > -1) {
+                                tetIdx = _vnt->parametricTriangleTet(closeTri, closeUV, gridLocus);
+                                if (tetIdx > -1) {
+                                        hit->second.triangle = closeTri;
+                                        hit->second.uv[0] = closeUV[0];
+                                        hit->second.uv[1] = closeUV[1];
+                                        _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+                                }
+                        }
+                        if (tetIdx < 0) {
+                                std::cerr << "WARNING: Unable to locate tet for hook " << hookNumber << std::endl;
+                                return false;
+                        }
+                }
+        } else {
+                _vnt->gridLocusToBarycentricWeight(gridLocus, _vnt->tetCentroid(tetIdx), bw);
+        }
 
         if(hit->second._constraintId < 0) {
                 // physics lattice was reinitialized, recreate constraint
