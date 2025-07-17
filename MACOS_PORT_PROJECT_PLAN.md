@@ -304,6 +304,7 @@ The main barriers to macOS compatibility are:
 - Next steps: Rebuild and validate hook drag across cut regions.
 - Blockers: None
 
+
 ---
 
 ## Technical Notes
