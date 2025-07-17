@@ -153,8 +153,8 @@ The main barriers to macOS compatibility are:
 #### 3.4 Testing
 - [ ] Create basic functionality test suite
 - [ ] Verify all surgical tools work (even if slowly)
-- [ ] Resolve hook movement crash after topology changes
-- [ ] Recompute hook UV coordinates after surface edits to keep hooks attached
+- [In Progress] Resolve hook movement crash after topology changes
+- [In Progress] Recompute hook UV coordinates after surface edits to keep hooks attached
 - [ ] Document performance baseline
 
 ### Deliverables
@@ -310,6 +310,12 @@ The main barriers to macOS compatibility are:
 - Next steps: Confirm hook dragging works after cuts and undermines.
 - Blockers: Missing MKL package preventing full build
 
+
+**[2025-07-21]** - [OpenAI Codex]
+- Task completed: Detect when a hook crosses into a new tetrahedron and recreate the constraint automatically to maintain stable dragging.
+- Files modified: `SkinFlaps/src/hooks.cpp`, `MACOS_PORT_PROJECT_PLAN.md`
+- Next steps: Test hook dragging after undermining to ensure crash free operation.
+- Blockers: None
 
 ---
 
