@@ -310,6 +310,7 @@ The main barriers to macOS compatibility are:
 - Next steps: Confirm hook dragging works after cuts and undermines.
 - Blockers: Missing MKL package preventing full build
 
+
 ---
 
 ## Technical Notes
