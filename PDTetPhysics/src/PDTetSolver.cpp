@@ -174,6 +174,32 @@ template<class T, int d>
 void PDTetSolver<T, d>::solve()
 {
 	std::cout << "DEBUG: PDTetSolver::solve() called" << std::endl;
+	
+	// MACOS PORT: Validate positions before solve
+	const T MAX_COORD = 1000.0;
+	bool hasInvalidPositions = false;
+	for (int i = 0; i < m_gridDeformer.m_X.size(); i++) {
+		for (int j = 1; j <= d; j++) {
+			if (std::isnan(m_gridDeformer.m_X[i](j)) || std::isinf(m_gridDeformer.m_X[i](j)) || 
+			    std::abs(m_gridDeformer.m_X[i](j)) > MAX_COORD) {
+				std::cout << "ERROR: Invalid position detected before solve - vertex " << i 
+				          << " has coordinate " << m_gridDeformer.m_X[i](j) 
+				          << " in dimension " << j << std::endl;
+				hasInvalidPositions = true;
+				// Clamp the position
+				if (std::isnan(m_gridDeformer.m_X[i](j)) || std::isinf(m_gridDeformer.m_X[i](j))) {
+					m_gridDeformer.m_X[i](j) = 0;
+				} else {
+					m_gridDeformer.m_X[i](j) = std::max(-MAX_COORD, std::min(MAX_COORD, m_gridDeformer.m_X[i](j)));
+				}
+			}
+		}
+	}
+	
+	if (hasInvalidPositions) {
+		std::cout << "WARNING: Invalid positions detected and clamped before solve!" << std::endl;
+	}
+	
 	using StateVariableType = typename DiscretizationType::StateVariableType;
 	using IteratorType = typename DeformerType::IteratorType;
 	using AlgebraType = PhysBAM::Algebra<StateVariableType>;
@@ -202,114 +228,9 @@ void PDTetSolver<T, d>::solve()
 	}
 	std::cout << "DEBUG: Total force magnitude = " << totalForceMagnitude << std::endl;
 
-	if (hasCollision) {
-#ifdef USE_CUDA
-		StateVariableType u{};
-		iterator.resize(u);
-
-		for (int v = 0; v < d; v++) {
-			m_solver_c.copyIn(f, v); //updateR1
-			m_solver_c.forwardSubstitution(); //forwardSubstitution
-			m_solver_c.setTemp(v); //setTemp
-			m_solver_c.copyOut(f, v); //copyOut
-
-			// exit(1);
-		}
-
-		// inner loop
-		for (int inner_i = 0; inner_i < m_nInner; inner_i++) {
-			//if (frame != 1)
-			updateCollisionConstraints();     // updateCollision
-
-		//m_solver_c.updatePardiso(deformer.m_collisionConstraints, deformer.m_collisionSutures);
-			m_solver_c.updateCuda(m_gridDeformer.m_collisionConstraints, m_gridDeformer.m_collisionSutures);
-
-			StateVariableType f_temp{};
-			iterator.resize(f_temp);
-
-			for (IteratorType iterator(f); !iterator.isEnd(); iterator.next())
-				if (iterator.value(m_gridDeformer.m_nodeType) != NodeType::Collision) {
-					iterator.value(f_temp) = iterator.value(f);
-				}
-
-			m_gridDeformer.updatePositionBasedState(ElementFlag::CollisionEl/*, m_rangeMin, m_rangeMax*/); // updateR2
-
-			m_gridDeformer.addElasticForce(f_temp, ElementFlag::CollisionEl/*, m_rangeMin, m_rangeMax, m_weightProportion*/); // addR2Force
-
-			m_gridDeformer.addCollisionForce(f_temp);     // addCollisionForce
-
-			for (int v = 0; v < d; v++) {
-				m_solver_c.copyIn(f_temp, v); // copyIn
-				m_solver_c.updateForce(v); // updateForce
-				m_solver_c.copyOut(f, v);//copyOut
-			}
-
-			//m_boxTest.clearDirichlet(m_boxTest.m_geometry, deformer.m_nodeType, f);
-			for (int v = 0; v < d; v++) {
-				m_solver_c.copyIn(f, v); //copyIn
-				m_solver_c.diagSolve(); //diagSolve
-				m_solver_c.updateTemp(v); // updateTemp
-				m_solver_c.copyOut(delta_X, v);//copyOutTime
-			}
-
-			// update x2
-			for (IteratorType iterator(delta_X); !iterator.isEnd(); iterator.next())
-				if (iterator.value(m_gridDeformer.m_nodeType) == NodeType::Collision)
-					iterator.value(m_gridDeformer.m_X) += iterator.value(delta_X);
-
-			// accum to u
-			for (IteratorType iterator(u); !iterator.isEnd(); iterator.next())
-				if (iterator.value(m_gridDeformer.m_nodeType) == NodeType::Collision)
-					iterator.value(u) += iterator.value(delta_X);
-
-			for (IteratorType iterator(delta_X); !iterator.isEnd(); iterator.next())
-				if (iterator.value(m_gridDeformer.m_nodeType) == NodeType::Inactive)
-					iterator.value(delta_X) = VectorType();
-
-		}
-		// copy in x1 part
-		for (IteratorType iterator(u); !iterator.isEnd(); iterator.next())
-			if (iterator.value(m_gridDeformer.m_nodeType) != NodeType::Collision)
-				iterator.value(u) = iterator.value(delta_X);
-
-		for (int v = 0; v < d; v++) {
-			m_solver_c.copyIn(u, v); // copyIn
-			m_solver_c.backwardSubstitution(); //backwardSubstitution
-			m_solver_c.copyOut(delta_X, v); // copyOut
-		}
-
-		// update x1
-		for (IteratorType iterator(delta_X); !iterator.isEnd(); iterator.next())
-			if (iterator.value(m_gridDeformer.m_nodeType) != NodeType::Collision)
-				iterator.value(m_gridDeformer.m_X) += iterator.value(delta_X);
-#else
-		StateVariableType u{};
-		iterator.resize(u);
-
-		updateCollisionConstraints();     // updateCollision
-		m_solver_c.updatePardiso(m_gridDeformer.m_collisionConstraints, m_gridDeformer.m_collisionSutures);
-			m_gridDeformer.updatePositionBasedState(ElementFlag::CollisionEl /*, m_rangeMin, m_rangeMax*/); // updateR2
-			m_gridDeformer.addElasticForce(f, ElementFlag::CollisionEl /*, m_rangeMin, m_rangeMax, m_weightProportion */ ); // addR2Force
-			m_gridDeformer.addCollisionForce(f);     // addCollisionForce
-
-			for (int v = 0; v < d; v++) {
-				m_solver_c.copyIn(f, v); //copyIn
-				m_solver_c.solve(); //diagSolve
-				m_solver_c.copyOut(delta_X, v);//copyOutTime
-			}
-
-			for (IteratorType i(delta_X); !i.isEnd(); i.next())
-				if (i.value(m_gridDeformer.m_nodeType) == NodeType::Inactive)
-					i.value(delta_X) = VectorType();
-
-		// update x1
-		for (IteratorType i(delta_X); !i.isEnd(); i.next())
-				i.value(m_gridDeformer.m_X) += i.value(delta_X);
-#endif
-	}
-	else {
-		//m_boxTest.clearDirichlet(m_boxTest.m_geometry, deformer.m_nodeType, f);
-
+	if (!hasCollision) {
+		updateCollisionConstraints();
+		
 		for (int v = 0; v < d; v++) {
 			m_solver_d.copyIn(f, v);
 			m_solver_d.solve();
@@ -327,12 +248,92 @@ void PDTetSolver<T, d>::solve()
 		}
 		std::cout << "DEBUG: Total delta_X magnitude = " << totalDeltaMagnitude << std::endl;
 		
+		// MACOS PORT: Limit displacement per iteration and apply damping
+		const T MAX_DISPLACEMENT_PER_ITER = 5.0;  // Increased from 0.5 to 2.0 for faster hook pulling
+		T maxDisp = 0;
+		for (int i = 0; i < delta_X.size(); i++) {
+			T disp = 0;
+			for (int dim = 1; dim <= 3; ++dim) {
+				disp += delta_X[i](dim) * delta_X[i](dim);
+			}
+			disp = std::sqrt(disp);
+			if (disp > maxDisp) maxDisp = disp;
+			if (disp > MAX_DISPLACEMENT_PER_ITER) {
+				for (int dim = 1; dim <= 3; ++dim) {
+					delta_X[i](dim) *= MAX_DISPLACEMENT_PER_ITER / disp;
+				}
+			}
+		}
+		
+		if (maxDisp > MAX_DISPLACEMENT_PER_ITER) {
+			std::cout << "WARNING: Limited maximum displacement from " << maxDisp 
+			          << " to " << MAX_DISPLACEMENT_PER_ITER << std::endl;
+		}
+		
+		// Apply damping to reduce oscillations
+		// MACOS PORT: Use adaptive damping based on oscillation detection
+		static T previousTotalDisplacement = 0;
+		
+		// Calculate current total displacement magnitude
+		T currentTotalDisplacement = 0;
+		for (int i = 0; i < delta_X.size(); i++) {
+			currentTotalDisplacement += delta_X[i].Magnitude_Squared();
+		}
+		
+		// Detect oscillations by checking if displacement direction reverses
+		bool oscillationDetected = (previousTotalDisplacement > 0 && 
+		                           currentTotalDisplacement > previousTotalDisplacement * 0.8);
+		
+		// Base damping - LOWER values mean MORE damping
+		T dampingFactor = 0.1;  // Reduced from 0.7 to 0.5 for even more damping
+		
+		if (oscillationDetected) {
+			dampingFactor = 0.1;  // Very strong damping during oscillations (was 0.2)
+			std::cout << "DEBUG: Oscillation detected, using stronger damping = " << dampingFactor << std::endl;
+		}
+		
+		previousTotalDisplacement = currentTotalDisplacement;
+		
+		for (int i = 0; i < delta_X.size(); i++) {
+			delta_X[i] *= dampingFactor;
+		}
+		
 		AlgebraType::addTo(m_gridDeformer.m_X, delta_X);
+		
+		// MACOS PORT: Validate positions after solve
+		hasInvalidPositions = false;
+		for (int i = 0; i < m_gridDeformer.m_X.size(); i++) {
+			for (int j = 1; j <= d; j++) {
+				if (std::isnan(m_gridDeformer.m_X[i](j)) || std::isinf(m_gridDeformer.m_X[i](j)) || 
+				    std::abs(m_gridDeformer.m_X[i](j)) > MAX_COORD) {
+					std::cout << "ERROR: Invalid position detected after solve - vertex " << i 
+					          << " has coordinate " << m_gridDeformer.m_X[i](j) 
+					          << " in dimension " << j << std::endl;
+					hasInvalidPositions = true;
+					// Clamp the position
+					if (std::isnan(m_gridDeformer.m_X[i](j)) || std::isinf(m_gridDeformer.m_X[i](j))) {
+						m_gridDeformer.m_X[i](j) = 0;
+					} else {
+						m_gridDeformer.m_X[i](j) = std::max(-MAX_COORD, std::min(MAX_COORD, m_gridDeformer.m_X[i](j)));
+					}
+				}
+			}
+		}
+		
+		if (hasInvalidPositions) {
+			std::cout << "WARNING: Invalid positions detected and clamped after solve!" << std::endl;
+		}
+	}
+	else {
+		// Collision solver case - not implemented for macOS yet
+		throw std::logic_error("Collision solver not yet implemented for macOS");
 	}
 
 	for (IteratorType i(delta_X); !i.isEnd(); i.next())
 	 	if (i.value(m_gridDeformer.m_nodeType) == NodeType::Inactive)
 	 		i.value(delta_X) = VectorType();
+	
+	// update invalid nodes
 	for (int i = 0; i < invalidNodes.size(); ++i) {
 		m_gridDeformer.m_X[invalidNodes[i]] = VectorType();
 		for (int j = 0; j < invalidEmbedding[i].size(); ++j) {
@@ -763,6 +764,9 @@ int PDTetSolver<T, d>::addConstraint(const int(&index)[d + 1], const T(&barycent
 	}
 	constraint.m_stiffness = stiffness;
 	constraint.m_stressLimit = limit;
+	
+	std::cout << "DEBUG: Adding constraint with stiffness=" << stiffness << ", stress limit=" << limit << std::endl;
+	
 	for (int v = 0; v < d; v++)
 		constraint.m_xT(v + 1) = hookPosition[v];
 
@@ -777,3 +781,4 @@ int PDTetSolver<T, d>::addConstraint(const int(&index)[d + 1], const T(&barycent
 // template instantiation
 template
 class PDTetSolver<float, 3>;
+

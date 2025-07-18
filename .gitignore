@@ -379,3 +379,41 @@ MigrationBackup/
 /Model/NeedleInSleeve.smd
 /Model/NeedleInSleeve.obj
 /Model/NeedleInSleeve2.obj
+
+# Build directories
+build/
+Build/
+[Bb]uild/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Compiled Object files
+*.o
+*.obj
+
+# Compiled Static libraries
+*.lib
+*.a
+
+# Executables
+*.exe
+*.out
+*.app
+
+# macOS specific
+.DS_Store
+
+# IDE specific
+.vscode/
+.idea/
+
+# But keep these specific files that might be needed
+!CMakeLists.txt
+!*/CMakeLists.txt
+!cmake/*.cmake
+!PDTetPhysics/cmake/*.cmake

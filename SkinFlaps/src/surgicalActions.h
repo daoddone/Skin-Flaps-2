@@ -61,6 +61,9 @@ public:
 	std::atomic<bool> physicsDone, newTopology, taskThreadError;
 	std::string taskThreadErrorStr;
 	bccTetScene _bts;
+	
+	// MACOS PORT: Add accessor for deep bed data
+	skinCutUndermineTets* getSkinCutUndermineTets() { return &_incisions; }
 
 	surgicalActions();
 	~surgicalActions();

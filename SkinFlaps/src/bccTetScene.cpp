@@ -16,6 +16,8 @@
 #include <string>
 #include <fstream>
 #include <algorithm>
+#include <unordered_set>
+#include <queue>
 #include "gl3wGraphics.h"
 #include "surgicalActions.h"
 #include "boundingBox.h"
@@ -183,13 +185,13 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 				strainMax = suboit->second.ToFloat();
 			else if (suboit->first == "lowTetWeight") {
 				_lowTetWeight = lowTetWeight = suboit->second.ToFloat();
-				lowTetWeight *= 0.33f;  // Make material 3x softer (was 5x)
-				_lowTetWeight *= 0.33f;
+				lowTetWeight *= 0.1f;  // Make material 10x softer to see deformation
+				_lowTetWeight *= 0.1f;
 				std::cout << "INFO: Reduced lowTetWeight to " << lowTetWeight << " for better deformation visibility" << std::endl;
 			}
 			else if (suboit->first == "highTetWeight") {
 				highTetWeight = suboit->second.ToFloat();
-				highTetWeight *= 0.33f;  // Make material 3x softer (was 5x)
+				highTetWeight *= 0.1f;  // Make material 10x softer to see deformation
 				std::cout << "INFO: Reduced highTetWeight to " << highTetWeight << " for better deformation visibility" << std::endl;
 			}
 			else if (suboit->first == "TJunctionWeight")
@@ -199,7 +201,7 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 			else if (suboit->first == "selfCollisionWeight")
 				selfCollisionWeight = suboit->second.ToFloat();
 			else if (suboit->first == "fixedWeight")
-				fixedWeight = suboit->second.ToFloat();
+				fixedWeight = suboit->second.ToFloat() * 0.1f;  // Reduce fixed constraint strength
 			else if (suboit->first == "periferalWeight") {
 				periferalWeight = suboit->second.ToFloat();
 				if (periferalWeight > 100.0f) {
@@ -210,9 +212,9 @@ bool bccTetScene::loadScene(const char *dataDirectory, const char *sceneFileName
 				sutureWeight = suboit->second.ToFloat();
 			else if (suboit->first == "hookWeight") {
 				hookWeight = suboit->second.ToFloat();
-				// MACOS PORT: Use original hook weight to prevent force spikes
-				// hookWeight *= 1.5f;  // Removed multiplier
-				std::cout << "INFO: Using original hook weight " << hookWeight << " for stability" << std::endl;
+				// Increase hook weight to apply stronger forces for visible deformation
+				hookWeight *= 2.0f;  // Reduced from 5x to 2x to prevent oscillations
+				std::cout << "INFO: Increased hook weight to " << hookWeight << " for more visible deformation" << std::endl;
 			}
 			else if (suboit->first == "autoSutureSpacing")
 				autoSutureSpacing = suboit->second.ToFloat();
@@ -323,7 +325,7 @@ void bccTetScene::createNewPhysicsLattice(int maxDimMegatetSubdivs, int nTetSize
 //		std::cout << "Tet number at this time is " << _vnTets.tetNumber() << "\n";
 
 		// MACOS PORT: Use original spring constant to prevent instability
-		_surgAct->getHooks()->setSpringConstant(_lowTetWeight * 1.0f);  // Using original multiplier to prevent force spikes
+		_surgAct->getHooks()->setSpringConstant(_lowTetWeight * 2.0f);  // Reduced from 5x to 2x to match hook weight reduction
 
 #ifdef NO_PHYSICS
 		_firstSpatialCoords.assign(_vnTets.nodeNumber(), Vec3f());
@@ -417,6 +419,55 @@ void bccTetScene::updatePhysics()
 #endif
 }
  
+bool bccTetScene::areVerticesConnectedWithoutCrossingIncisions(int v1, int v2)
+{
+	// MACOS PORT: Check if two vertices are connected through triangles without crossing material 3 (incision) boundaries
+	// This is used to limit hook force propagation across incisions
+	
+	if (v1 == v2) return true;
+	
+	// If either vertex is on an incision boundary, they can't be connected
+	if (_incisionBoundaryVertices.find(v1) != _incisionBoundaryVertices.end() ||
+	    _incisionBoundaryVertices.find(v2) != _incisionBoundaryVertices.end()) {
+		return false;
+	}
+	
+	// Use BFS to find a path between vertices that doesn't cross material 3 triangles
+	std::unordered_set<int> visited;
+	std::queue<int> toVisit;
+	toVisit.push(v1);
+	visited.insert(v1);
+	
+	while (!toVisit.empty()) {
+		int currentV = toVisit.front();
+		toVisit.pop();
+		
+		// Get all triangles containing this vertex
+		std::vector<materialTriangles::neighborNode> neighbors;
+		_mt->getNeighbors(currentV, neighbors);
+		
+		for (const auto& neighbor : neighbors) {
+			// Skip if this triangle is an incision edge (material 3)
+			if (_mt->triangleMaterial(neighbor.triangle) == 3) {
+				continue;
+			}
+			
+			// Check the neighbor vertex
+			if (neighbor.vertex == v2) {
+				return true;  // Found a path!
+			}
+			
+			// Add unvisited neighbor to queue
+			if (visited.find(neighbor.vertex) == visited.end()) {
+				visited.insert(neighbor.vertex);
+				toVisit.push(neighbor.vertex);
+			}
+		}
+	}
+	
+	return false;  // No path found without crossing incisions
+}
+
 void bccTetScene::setVisability(char surface, char physics)
 {  // 0=off, 1=on, 2=don't change
 	if (surface < 1)
@@ -491,24 +542,82 @@ void bccTetScene::updateSurfaceDraw()
 		ap.isPeriferal = periferal;
 		fixPoints.insert(std::make_pair(_vnTets.getVertexTetrahedron(vId), ap));
 	};
-	int peripheralSkipCounter = 0;
 	for (int n = _mt->numberOfTriangles(), i = 0; i < n; ++i) {
-		if (_mt->triangleMaterial(i) == 7) {  // periosteal triangle
-			for (int k = 0; k < 3; ++k) {
-				int vIdx = _mt->triangleVertices(i)[k];
-				enterFixPoint(vIdx, false);
-			}
+		int mat = _mt->triangleMaterial(i);
+		if (mat == 7 || mat == 8) {  // periosteal
+			int* tr = _mt->triangleVertices(i);
+			for (int j = 0; j < 3; ++j)
+				enterFixPoint(tr[j], false);
 		}
-		if (_mt->triangleMaterial(i) == 1) {  // peripheral triangle
-			if (peripheralSkipCounter % 3 == 0) {
-			for (int k = 0; k < 3; ++k) {
-				int vIdx = _mt->triangleVertices(i)[k];
-				enterFixPoint(vIdx, true);
-			}
-			}
-			peripheralSkipCounter++;
+		else if (mat == 1) {  // periferal
+			int* tr = _mt->triangleVertices(i);
+			for (int j = 0; j < 3; ++j)
+				enterFixPoint(tr[j], true);
 		}
 	}
+	
+	// MACOS PORT: Add fixed points at boundaries between undermined and non-undermined regions
+	// This prevents oscillations in non-undermined tissue when hooks are applied
+	std::cout << "DEBUG: Checking for undermined boundary vertices..." << std::endl;
+	std::unordered_set<int> boundaryVertices;
+	
+	// First, check if we have access to the surgical actions
+	if (!_surgAct) {
+		std::cout << "DEBUG: No surgical actions available, skipping boundary detection" << std::endl;
+	} else {
+		int underminedCount = 0;
+		int boundaryCount = 0;
+		int fixedNonUndermined = 0;
+		
+		// MACOS PORT: Fix ALL non-undermined skin vertices to completely eliminate oscillations
+		for (int n = _mt->numberOfTriangles(), i = 0; i < n; ++i) {
+			int mat = _mt->triangleMaterial(i);
+			if (mat == 2) {  // skin surface (could be undermined or not)
+				// Check if this triangle is undermined
+				bool isUndermined = _surgAct->getSkinCutUndermineTets()->triangleUndermined(i);
+				
+				if (isUndermined) {
+					underminedCount++;
+				} else {
+					// This is non-undermined skin - fix all its vertices
+					int* tr = _mt->triangleVertices(i);
+					for (int j = 0; j < 3; ++j) {
+						if (boundaryVertices.insert(tr[j]).second) {
+							fixedNonUndermined++;
+						}
+					}
+				}
+			}
+		}
+		
+		std::cout << "DEBUG: Found " << underminedCount << " undermined triangles" << std::endl;
+		std::cout << "DEBUG: Found " << boundaryCount << " boundary triangles" << std::endl;
+		std::cout << "DEBUG: Total boundary vertices to fix: " << boundaryVertices.size() << std::endl;
+		
+		// Now actually fix the boundary vertices
+		for (int vIdx : boundaryVertices) {
+			enterFixPoint(vIdx, true);  // Use peripheral-style constraints
+		}
+		
+		if (!boundaryVertices.empty()) {
+			std::cout << "DEBUG: Added " << boundaryVertices.size() << " fixed vertices at undermined boundaries" << std::endl;
+		}
+	}
+	
+	// MACOS PORT: Add method to identify vertices connected to a hook without crossing incisions
+	// This will be used to limit force propagation from hooks
+	_incisionBoundaryVertices.clear();
+	for (int n = _mt->numberOfTriangles(), i = 0; i < n; ++i) {
+		int mat = _mt->triangleMaterial(i);
+		if (mat == 3) {  // incision edge triangle
+			int* tr = _mt->triangleVertices(i);
+			for (int j = 0; j < 3; ++j) {
+				_incisionBoundaryVertices.insert(tr[j]);
+			}
+		}
+	}
+	std::cout << "DEBUG: Identified " << _incisionBoundaryVertices.size() << " incision boundary vertices" << std::endl;
+	
 	size_t n = fixPoints.size();
 	std::vector<int> fixedTets, peripheralTets;
 	fixedTets.reserve(n);

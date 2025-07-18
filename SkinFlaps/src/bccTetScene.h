@@ -20,6 +20,7 @@
 #include "tetSubset.h"
 #include "remapTetPhysics.h"
 #include "pdTetPhysics.h"
+#include <unordered_set>
 
 // forward declarations
 class gl3wGraphics;
@@ -42,7 +43,7 @@ public:
 	inline void promoteSutures() { _ptp.promoteAllSutures(); _ptp.initializePhysics(); }
 	vnBccTetrahedra* getVirtualNodedBccTetrahedra() { return &_vnTets; }
 	void setVisability(char surface, char physics);	// 0=off, 1=on, 2=don't change
-	void setGl3wGraphics(gl3wGraphics *gl3w) { _gl3w = gl3w; }
+	inline void setGl3wGraphics(gl3wGraphics *gl3w) { _gl3w = gl3w; }
 	void createTetLatticeDrawing();
 	void drawTetLattice();
 	void eraseTetLattice();
@@ -50,6 +51,10 @@ public:
 	void setPhysicsPause(bool pause) { _physicsPaused = pause; }
 	inline bool isPhysicsPaused(){ return  _physicsPaused; }
 	inline bool forcesApplied() { return  _forcesApplied; }
+	
+	// MACOS PORT: Check if vertices are connected without crossing incision boundaries
+	bool areVerticesConnectedWithoutCrossingIncisions(int v1, int v2);
+	
 	bccTetScene();
 	~bccTetScene();
 
@@ -71,6 +76,9 @@ private:
 	std::vector<GLfloat> _nodeGraphicsPositions;  // homogeneous coords[4]
 
 	std::vector<Vec3f> _firstSpatialCoords;
+
+	// MACOS PORT: Track incision boundary vertices to limit hook force propagation
+	std::unordered_set<int> _incisionBoundaryVertices;
 
 };
 

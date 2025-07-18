@@ -66,6 +66,7 @@ void surgicalActions::sendUserMessage(const char *message, const char *title, bo
 
 bool surgicalActions::rightMouseDown(std::string objectHit, float (&position)[3], int triangle)
 {	// returns true if a surgical action is taken, false if this is a simple viewer command
+	std::cout << "DEBUG: rightMouseDown - objectHit='" << objectHit << "', toolState=" << _toolState << std::endl;
 	if((_toolState==0 && objectHit[1]!='_') || (_toolState>0 && (objectHit.substr(0,2)=="H_" || objectHit.substr(0,2)=="S_")))
 		return false;
 	// staticTriangle objects are only scenery. If user selects one, just ignore it. pick() should ignore it
@@ -90,6 +91,7 @@ bool surgicalActions::rightMouseDown(std::string objectHit, float (&position)[3]
 			hookNum = atoi(_selectedSurgObject.c_str()+2);
 			_sutures.selectSuture(-1);
 			_hooks.selectHook(hookNum);
+			std::cout << "DEBUG: Selected hook " << hookNum << std::endl;
 		}
 		else if(objectHit.substr(0,2)=="S_")	// user picked a suture
 		{
@@ -125,6 +127,7 @@ bool surgicalActions::rightMouseDown(std::string objectHit, float (&position)[3]
 			_hooks.setGLmatrices(_gl3w->getGLmatrices());
 			_hooks.setPhysicsLattice(_bts.getPdTetPhysics_2());
 			_hooks.setVnBccTetrahedra(_bts.getVirtualNodedBccTetrahedra());
+			_hooks.setSkinCutUndermineTets(&_incisions);  // MACOS PORT: Access to undermine data
 		}
 
 		// COURT visual debug use
@@ -883,9 +886,34 @@ bool surgicalActions::mouseMotion(float dScreenX, float dScreenY)
 			return false;
 		}
 		
+		// MACOS PORT: If shift key is held, constrain movement along hook axis
+		if (_ffg->CtrlOrShiftKeyIsDown()) {
+			// Get hook's base position on the tissue
+			Vec3f basePos;
+			materialTriangles* tr = _sg.getMaterialTriangles();
+			int triangle;
+			float uv[2];
+			if (_hooks.getHookTriangle(hookNum, triangle, uv)) {
+				tr->getBarycentricPosition(triangle, uv, basePos.xyz);
+				
+				// Calculate hook axis (from base to current position)
+				Vec3f hookAxis = xyz - basePos;
+				float axisLength = hookAxis.length();
+				if (axisLength > 0.001f) {  // Avoid division by zero
+					hookAxis.normalize();
+					
+					// Project the drag vector onto the hook axis
+					float projection = dv * hookAxis;
+					dv = hookAxis * projection;
+					
+					std::cout << "DEBUG: Shift-constrained hook movement along axis" << std::endl;
+				}
+			}
+		}
+		
                 // MACOS PORT: Limit maximum displacement to prevent force spikes
-                // Allow slightly larger movements to make hook dragging visible
-                const float MAX_DISPLACEMENT = 0.002f;  // Limit to 2mm per frame
+                // Use much smaller limit to prevent numerical instability
+                const float MAX_DISPLACEMENT = 0.5f;  // Reduced from 2.0mm to 0.5mm for smoother movement
 		float displacement = sqrt(dv.xyz[0]*dv.xyz[0] + dv.xyz[1]*dv.xyz[1] + dv.xyz[2]*dv.xyz[2]);
 		if (displacement > MAX_DISPLACEMENT) {
 			float scale = MAX_DISPLACEMENT / displacement;
@@ -894,6 +922,12 @@ bool surgicalActions::mouseMotion(float dScreenX, float dScreenY)
 			dv.xyz[2] *= scale;
 			std::cout << "DEBUG: Limited hook displacement from " << displacement << " to " << MAX_DISPLACEMENT << std::endl;
 		}
+		
+		// Add damping to smooth movement
+		static Vec3f lastDv(0.0f, 0.0f, 0.0f);
+		const float DAMPING = 0.7f;  // 0 = no damping, 1 = full damping
+		dv = dv * (1.0f - DAMPING) + lastDv * DAMPING;
+		lastDv = dv;
 		
 		xyz += dv;
 		std::cout << "DEBUG: Moving hook " << hookNum << " by (" << dv.xyz[0] << ", " << dv.xyz[1] << ", " << dv.xyz[2] << ")" << std::endl;
@@ -1887,6 +1921,7 @@ void surgicalActions::nextHistoryAction()
 			_hooks.setGLmatrices(_gl3w->getGLmatrices());
 			_hooks.setPhysicsLattice(_bts.getPdTetPhysics_2());
 			_hooks.setVnBccTetrahedra(_bts.getVirtualNodedBccTetrahedra());
+			_hooks.setSkinCutUndermineTets(&_incisions);  // MACOS PORT: Access to undermine data
 		}
 		hookNum = -1;
 		bool strongHook = false;

@@ -114,11 +114,18 @@ template <class Discretization, class IntType> struct SchurSolver {
 
     void copyIn(const StateVariableType &f, const int v) const {
         // copy in x
+        int copiedCount = 0;
+        int skippedCount = 0;
         for (Iterator<StateVariableType> iterator(f); !iterator.isEnd(); iterator.next()) {
             const int number = iterator.value(m_numbering);
-            if (number >= 0)
+            if (number >= 0) {
                 m_rhs[number] = iterator.value(f)(v + 1);
+                copiedCount++;
+            } else {
+                skippedCount++;
+            }
         }
+        std::cout << "DEBUG: copyIn - copied " << copiedCount << " values, skipped " << skippedCount << " inactive nodes" << std::endl;
     }
 
     void copyOut(StateVariableType &f, const int v) const {
@@ -134,6 +141,14 @@ template <class Discretization, class IntType> struct SchurSolver {
 #if TIMING
         auto start1 = std::chrono::steady_clock::now();
 #endif
+        // Debug: Check RHS
+        T rhsNorm = 0;
+        for (int i = 0; i < m_pardiso.n; ++i) {
+            rhsNorm += m_rhs[i] * m_rhs[i];
+        }
+        rhsNorm = std::sqrt(rhsNorm);
+        std::cout << "DEBUG: SchurSolver - RHS norm = " << rhsNorm << std::endl;
+        
         m_pardiso.forwardSubstitution(m_rhs, m_x);
 #if TIMING
          auto end1 = std::chrono::steady_clock::now();
@@ -147,6 +162,14 @@ template <class Discretization, class IntType> struct SchurSolver {
         auto start2 = std::chrono::steady_clock::now();
 #endif
         m_pardiso.backwardSubstitution(m_rhs, m_x);
+
+        // Debug: Check solution
+        T solNorm = 0;
+        for (int i = 0; i < m_pardiso.n; ++i) {
+            solNorm += m_x[i] * m_x[i];
+        }
+        solNorm = std::sqrt(solNorm);
+        std::cout << "DEBUG: SchurSolver - Solution norm = " << solNorm << std::endl;
 
 #if TIMING
          auto end2 = std::chrono::steady_clock::now();

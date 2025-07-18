@@ -144,11 +144,11 @@ public:
 		fixedTetConstraints.reserve(fixedTets.size() + peripheralTets.size());
 		int fts = fixedTets.size();
 		for (int i = 0; i < fts; i++) {
-			int handle = m_solver.addConstraint(reinterpret_cast<const int(&)[4]>(m_solver.getTetIndices(fixedTets[i])), reinterpret_cast<const T(&)[3]>(fixedWeights[i]), reinterpret_cast<const T(&)[3]>(fixedPositions[i]), m_fixedWeight); // change weight
+			int handle = m_solver.addConstraint(reinterpret_cast<const int(&)[4]>(m_solver.getTetIndices(fixedTets[i])), reinterpret_cast<const T(&)[3]>(fixedWeights[i]), reinterpret_cast<const T(&)[3]>(fixedPositions[i]), m_fixedWeight, m_stressLimit); // change weight
 			fixedTetConstraints.push_back(handle);
 		}
 		for (int i = 0; i < peripheralTets.size(); i++) {
-			int handle = m_solver.addConstraint(reinterpret_cast<const int(&)[4]>(m_solver.getTetIndices(peripheralTets[i])), reinterpret_cast<const T(&)[3]>(peripheralWeights[i]), reinterpret_cast<const T(&)[3]>(peripheralPositions[i]), m_peripheralWeight); // change weight
+			int handle = m_solver.addConstraint(reinterpret_cast<const int(&)[4]>(m_solver.getTetIndices(peripheralTets[i])), reinterpret_cast<const T(&)[3]>(peripheralWeights[i]), reinterpret_cast<const T(&)[3]>(peripheralPositions[i]), m_peripheralWeight, m_stressLimit); // change weight
 			fixedTetConstraints.push_back(handle);
 		}
 	}

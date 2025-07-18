@@ -34,6 +34,11 @@ class gl3wGraphics;
 class skinCutUndermineTets
 {
 public:
+	// MACOS PORT: Move deepPoint struct to public for external access
+	struct deepPoint{
+		Vec3f gridLocus;
+		int deepMtVertex;  // get tet & barycentrics from here when > -1
+	};
 
 	void setGl3wGraphics(gl3wGraphics *gl3w) { _gl3w = gl3w; }  // for debug - nuke later
 	bool skinCut(std::vector<Vec3f> &topCutPoints, std::vector<Vec3f> &topNormals, bool startOpen, bool endOpen);  // history version
@@ -48,6 +53,10 @@ public:
 	inline static void setVnBccTetrahedra(vnBccTetrahedra *activeVnt) { _vbt = activeVnt;  }
 	inline void setMaterialTriangles(materialTriangles *mt) { _mt = mt; }
 	inline materialTriangles* getMaterialTriangles(){ return _mt; }
+	
+	// MACOS PORT: Add accessor for deep bed data
+	inline std::unordered_map<int, deepPoint>* getDeepBed() { return &_deepBed; }
+	
 	skinCutUndermineTets();
 	skinCutUndermineTets(const skinCutUndermineTets&) = delete;
 	skinCutUndermineTets& operator=(const skinCutUndermineTets&) = delete;
@@ -57,10 +66,7 @@ protected:
 	static gl3wGraphics *_gl3w;
 	static materialTriangles *_mt;  // embedded surface
 	static vnBccTetrahedra *_vbt;  // above surface embedded in these current cut tets.
-	struct deepPoint{
-		Vec3f gridLocus;
-		int deepMtVertex;  // get tet & barycentrics from here when > -1
-	};
+	// struct deepPoint removed from here - moved to public section
 	static std::unordered_map<int, deepPoint> _deepBed;
 	// next is data of previously undermined triangles. _prevUnd2 are all previouslu undermined top triangles. Rest are previous undermines containing a non-duplicated deep vertex.  All are sorted vectors except _prevBot5.
 	// filled before each undermine by collectOldUndermineData()

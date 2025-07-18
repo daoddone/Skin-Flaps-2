@@ -5,47 +5,23 @@ project(PDTetPhysics LANGUAGES CXX)
 find_package(Threads REQUIRED)
 find_package(OpenMP)
 
-# Platform-specific configuration
+# --- Platform-specific configurations ---------------------------------------
 if(APPLE)
-    # Use Accelerate framework on macOS
+    # macOS specific settings
     find_library(ACCELERATE_FRAMEWORK Accelerate)
-    if(NOT ACCELERATE_FRAMEWORK)
-        message(FATAL_ERROR "Accelerate framework not found")
+    if(ACCELERATE_FRAMEWORK)
+        message(STATUS "Found Accelerate Framework for macOS")
+    else()
+        message(FATAL_ERROR "Accelerate Framework not found on macOS")
     endif()
-    message(STATUS "Found Accelerate Framework for macOS")
     
-    # Find SuiteSparse for sparse matrix solving on macOS
-    find_path(SUITESPARSE_INCLUDE_DIR umfpack.h
-        PATHS /opt/homebrew/include/suitesparse /usr/local/include/suitesparse
-        REQUIRED
-    )
+    # Remove the old SuiteSparse finding code - we use pkg-config now
     
-    find_library(UMFPACK_LIB umfpack
-        PATHS /opt/homebrew/lib /usr/local/lib
-        REQUIRED
-    )
+    # macOS sparse solver selection
+    set(MACOS_SPARSE_SOLVER "UMFPACK" CACHE STRING "Sparse solver to use on macOS (EIGEN or UMFPACK)")
+    set_property(CACHE MACOS_SPARSE_SOLVER PROPERTY STRINGS "EIGEN" "UMFPACK")
     
-    find_library(CHOLMOD_LIB cholmod
-        PATHS /opt/homebrew/lib /usr/local/lib
-        REQUIRED
-    )
-    
-    find_library(AMD_LIB amd
-        PATHS /opt/homebrew/lib /usr/local/lib
-        REQUIRED
-    )
-    
-    find_library(COLAMD_LIB colamd
-        PATHS /opt/homebrew/lib /usr/local/lib
-        REQUIRED
-    )
-    
-    find_library(SUITESPARSE_CONFIG_LIB suitesparseconfig
-        PATHS /opt/homebrew/lib /usr/local/lib
-        REQUIRED
-    )
-    
-    message(STATUS "Found SuiteSparse libraries for macOS")
+    # We'll configure the sparse solver after the library is created
 else()
     # Use MKL on other platforms
     find_package(MKL REQUIRED)
@@ -103,40 +79,22 @@ if(APPLE)
     find_package(TBB REQUIRED)
     target_link_libraries(PDTetPhysics PUBLIC TBB::tbb)
 
-    # Option to choose sparse solver on macOS
-    set(MACOS_SPARSE_SOLVER "EIGEN" CACHE STRING "Sparse solver to use on macOS (EIGEN or UMFPACK)")
+    # macOS sparse solver selection
+    set(MACOS_SPARSE_SOLVER "UMFPACK" CACHE STRING "Sparse solver to use on macOS (EIGEN or UMFPACK)")
     set_property(CACHE MACOS_SPARSE_SOLVER PROPERTY STRINGS "EIGEN" "UMFPACK")
     
-    if(MACOS_SPARSE_SOLVER STREQUAL "EIGEN")
-        message(STATUS "Using Eigen's built-in sparse solvers on macOS")
-        add_definitions(-DUSE_EIGEN_SPARSE)
-    else()
+    if(MACOS_SPARSE_SOLVER STREQUAL "UMFPACK")
+        find_package(PkgConfig REQUIRED)
+        pkg_check_modules(SUITESPARSE REQUIRED umfpack)
+        
+        target_include_directories(PDTetPhysics PUBLIC ${SUITESPARSE_INCLUDE_DIRS})
+        target_link_libraries(PDTetPhysics PUBLIC ${SUITESPARSE_LIBRARIES})
+        target_compile_definitions(PDTetPhysics PUBLIC USE_SUITESPARSE)
         message(STATUS "Using UMFPACK sparse solver on macOS")
-        # Find UMFPACK (part of SuiteSparse)
-        find_path(UMFPACK_INCLUDE_DIR umfpack.h
-            PATHS /usr/local/include /opt/homebrew/include /opt/local/include
-            PATH_SUFFIXES suitesparse)
-        
-        find_library(UMFPACK_LIBRARY umfpack
-            PATHS /usr/local/lib /opt/homebrew/lib /opt/local/lib)
-        
-        find_library(AMD_LIBRARY amd
-            PATHS /usr/local/lib /opt/homebrew/lib /opt/local/lib)
-        
-        find_library(CHOLMOD_LIBRARY cholmod
-            PATHS /usr/local/lib /opt/homebrew/lib /opt/local/lib)
-        
-        find_library(SUITESPARSECONFIG_LIBRARY suitesparseconfig
-            PATHS /usr/local/lib /opt/homebrew/lib /opt/local/lib)
-        
-        if(UMFPACK_INCLUDE_DIR AND UMFPACK_LIBRARY AND AMD_LIBRARY)
-            message(STATUS "Found UMFPACK: ${UMFPACK_LIBRARY}")
-            set(UMFPACK_LIBRARIES ${UMFPACK_LIBRARY} ${AMD_LIBRARY} ${CHOLMOD_LIBRARY} ${SUITESPARSECONFIG_LIBRARY})
-            include_directories(${UMFPACK_INCLUDE_DIR})
-            add_definitions(-DUSE_SUITESPARSE)
-        else()
-            message(FATAL_ERROR "UMFPACK not found. Install SuiteSparse or switch to EIGEN solver.")
-        endif()
+    else()
+        # Use Eigen's built-in sparse solvers
+        message(STATUS "Using Eigen sparse solver on macOS")
+        target_compile_definitions(PDTetPhysics PUBLIC USE_EIGEN_SPARSE)
     endif()
 else()
     # On Windows/Linux, find and link MKL and its threading layer
@@ -162,15 +120,26 @@ target_link_libraries(PDTetPhysics PUBLIC
 
 if(APPLE)
     target_link_libraries(PDTetPhysics PUBLIC ${ACCELERATE_FRAMEWORK})
-    # Link SuiteSparse libraries on macOS
-    if(UMFPACK_LIB AND CHOLMOD_LIB AND AMD_LIB AND COLAMD_LIB AND SUITESPARSE_CONFIG_LIB)
-        target_link_libraries(PDTetPhysics PUBLIC 
-            ${UMFPACK_LIB} 
-            ${CHOLMOD_LIB} 
-            ${AMD_LIB}
-            ${COLAMD_LIB}
-            ${SUITESPARSE_CONFIG_LIB}
-        )
+    # SuiteSparse libraries are already linked via pkg-config above
+    
+    # Find and link TBB
+    find_package(TBB REQUIRED)
+    target_link_libraries(PDTetPhysics PUBLIC TBB::tbb)
+    
+    # Configure sparse solver for macOS
+    if(MACOS_SPARSE_SOLVER STREQUAL "UMFPACK")
+        find_package(PkgConfig REQUIRED)
+        pkg_check_modules(SUITESPARSE REQUIRED umfpack)
+        
+        target_include_directories(PDTetPhysics PUBLIC ${SUITESPARSE_INCLUDE_DIRS})
+        target_link_directories(PDTetPhysics PUBLIC ${SUITESPARSE_LIBRARY_DIRS})
+        target_link_libraries(PDTetPhysics PUBLIC ${SUITESPARSE_LIBRARIES})
+        target_compile_definitions(PDTetPhysics PUBLIC USE_SUITESPARSE)
+        message(STATUS "Using UMFPACK sparse solver on macOS")
+    else()
+        # Use Eigen's built-in sparse solvers
+        message(STATUS "Using Eigen sparse solver on macOS")
+        target_compile_definitions(PDTetPhysics PUBLIC USE_EIGEN_SPARSE)
     endif()
 else()
     target_link_libraries(PDTetPhysics PUBLIC ${MKL_LIBRARIES})

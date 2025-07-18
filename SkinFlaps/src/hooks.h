@@ -36,6 +36,8 @@ protected:
         std::shared_ptr<sceneNode> _shape;
         int _constraintId;
         int _tetIndex;
+        std::vector<int> _underminedVertices;  // MACOS PORT: Vertices in undermined region
+        std::vector<int> _distributedConstraints;  // MACOS PORT: Additional constraints for flap movement
 	friend class hooks;
 };
 
@@ -46,6 +48,7 @@ public:
 	bool getHookPosition(unsigned int hookNumber, float (&hookPos)[3]);
 	bool setHookPosition(unsigned int hookNumber, float (&hookPos)[3]);
 	bool getSelectPosition(unsigned int hookNumber, float(&selectPos)[3]);
+	bool getHookTriangle(unsigned int hookNumber, int &triangle, float(&uv)[2]);  // MACOS PORT: Get hook attachment point
 	bool updateHookPhysics();  // must do after a physics lattice change
 	int getNumberOfHooks() {return (int)_hooks.size();}
 	float getHookSize() {return _hookSize;}
@@ -58,8 +61,12 @@ public:
 	void setGLmatrices(GLmatrices *GLm) {_glm=GLm;}
 	void setPhysicsLattice(pdTetPhysics *pdtp) { _ptp = pdtp; }
 	void setVnBccTetrahedra(vnBccTetrahedra *vnt) { _vnt = vnt; }
+	void setSkinCutUndermineTets(skinCutUndermineTets *scut) { _scut = scut; }  // MACOS PORT: Access to undermine data
 	inline bool empty() { return _hooks.empty(); }
 	inline void setGroupPhysicsInit(bool groupInit) { _groupPhysicsInit = groupInit; }
+	
+	// MACOS PORT: Get all vertices in the undermined region containing the given triangle
+	std::vector<int> getUnderminedRegionVertices(int hookTriangle, materialTriangles* tri);
 
 	hooks();
 	~hooks();
@@ -68,6 +75,7 @@ private:
 	GLmatrices *_glm;
 	pdTetPhysics *_ptp;
 	vnBccTetrahedra *_vnt;
+	skinCutUndermineTets *_scut;  // MACOS PORT: Access to undermine data
 	shapes *_shapes;
 	typedef std::map<unsigned int, hookConstraint> HOOKMAP;
 	HOOKMAP _hooks;

@@ -237,7 +237,10 @@ public:
 			igGl3w.mouseButtonEvent((unsigned short)scaledX, (unsigned short)scaledY, 1, true);
 		if (buttonsDown & 4) {
 			if (surgicalDrag && buttonsDown == 4) {  // buttonsDown == 4 and other buttons off
-				igSurgAct.mouseMotion(((float)xpos - lastSurgX) / windowWidth, (lastSurgY - (float)ypos) / windowHeight);
+				float deltaX = ((float)xpos - lastSurgX) / windowWidth;
+				float deltaY = (lastSurgY - (float)ypos) / windowHeight;
+				std::cout << "DEBUG: cursor_position_callback - deltaX=" << deltaX << ", deltaY=" << deltaY << std::endl;
+				igSurgAct.mouseMotion(deltaX, deltaY);
 				lastSurgX = (float)xpos;
 				lastSurgY = (float)ypos;
 			}

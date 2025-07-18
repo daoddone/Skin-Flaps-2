@@ -297,20 +297,56 @@ namespace PhysBAM {
     {
         StateVariableType fLocal;
         {
+            std::cout << "DEBUG: addConstraintForce - processing " << m_constraints.size() << " constraints" << std::endl;
+            int warningCount = 0;
+            T maxDisplacement = 0;
+            T maxForce = 0;
+            
             for (int c = 0; c < m_constraints.size(); c++) {
 				const auto &constraint = m_constraints[c];
 				if (constraint.m_stiffness) {
 					VectorType x;
 					x = DiscretizationType::template interpolateX<elementNodes>(constraint.m_elementIndex, constraint.m_weights, m_X);
+					
+					// Debug: Print current and target positions only for first few constraints
+					if (c < 3) {
+						std::cout << "  Constraint " << c << ": stiffness=" << constraint.m_stiffness 
+						         << ", current=(" << x(1) << "," << x(2) << "," << x(3) << ")"
+						         << ", target=(" << constraint.m_xT(1) << "," << constraint.m_xT(2) << "," << constraint.m_xT(3) << ")" << std::endl;
+					}
+					
 					x -= constraint.m_xT;
 					const T length = x.Lp_Norm(2);
+					
+					if (length > maxDisplacement) maxDisplacement = length;
+					
+					// MACOS PORT: Add safety check for extreme displacements
+					if (length > 100.0) {  // If displacement is more than 10cm, something is wrong
+						warningCount++;
+						x *= 100.0 / length;
+					}
+					
 					if (length > constraint.m_stressLimit)
 						x *= constraint.m_stressLimit / length;
 					x *= -constraint.m_stiffness;
+					
+					// Debug: Print resulting force
+					T forceMagnitude = x.Lp_Norm(2);
+					if (forceMagnitude > maxForce) maxForce = forceMagnitude;
+					
+					// MACOS PORT: Additional safety check for extreme forces
+					if (forceMagnitude > 10000.0) {  // Cap forces at a reasonable maximum
+						warningCount++;
+						x *= 10000.0 / forceMagnitude;
+					}
 
 					DiscretizationType::template distributeForces<elementNodes>(x, constraint.m_elementIndex, constraint.m_weights, f);
 				}
             }
+            
+            std::cout << "  Summary: max displacement = " << maxDisplacement 
+                      << ", max force = " << maxForce 
+                      << ", warnings = " << warningCount << std::endl;
 
         }
 
@@ -569,6 +605,7 @@ namespace PhysBAM {
                     }
             }
         }*/
+
 
 
 
