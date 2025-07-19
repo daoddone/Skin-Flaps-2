@@ -328,11 +328,6 @@ SkinFlaps/SkinFlaps: imgui_glfw_nfd_lib/extLibs/gl3w/libgl3w.a
 SkinFlaps/SkinFlaps: PhysBAM_subset/libPhysBAM_subset.a
 SkinFlaps/SkinFlaps: simd-numeric-kernels-new/libsimd-numeric-kernels-new.a
 SkinFlaps/SkinFlaps: /opt/homebrew/lib/libtbb.12.16.dylib
-SkinFlaps/SkinFlaps: /opt/homebrew/lib/libumfpack.dylib
-SkinFlaps/SkinFlaps: /opt/homebrew/lib/libcholmod.dylib
-SkinFlaps/SkinFlaps: /opt/homebrew/lib/libamd.dylib
-SkinFlaps/SkinFlaps: /opt/homebrew/lib/libcolamd.dylib
-SkinFlaps/SkinFlaps: /opt/homebrew/lib/libsuitesparseconfig.dylib
 SkinFlaps/SkinFlaps: /opt/homebrew/lib/libglfw.3.4.dylib
 SkinFlaps/SkinFlaps: SkinFlaps/CMakeFiles/SkinFlaps.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/christian/Court_Cutting_MD/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Linking CXX executable SkinFlaps"

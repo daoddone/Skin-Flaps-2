@@ -2619,6 +2619,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o: /U
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/support/pthread.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/find_index.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/ignore.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__tuple/make_tuple_types.h \
@@ -2774,6 +2775,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o: /U
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/atomic \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bit \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cerrno \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ciso646 \
@@ -2807,8 +2809,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o: /U
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale.h \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/memory \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/mutex \
@@ -3153,6 +3157,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o: /U
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -3164,7 +3169,207 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/PardisoWrapper.cpp.o: /U
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stddef.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdint.h \
   /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/MKLWrapper.h \
-  /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/PardisoWrapper.h
+  /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/PardisoWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/ReshapeDataStructure.cpp.o: /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/ReshapeDataStructure.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -5006,6 +5211,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/SchurSolver.cpp.o: /User
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
@@ -5353,6 +5559,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/SchurSolver.cpp.o: /User
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -5460,7 +5667,207 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/PDDeformer/src/SchurSolver.cpp.o: /User
   /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/SimulationFlags.h \
   /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/dumper.h \
   /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Math_Tools/RANGE_ITERATOR.h \
-  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h
+  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/MergedLevelSet.cpp.o: /Users/christian/Court_Cutting_MD/PDTetPhysics/src/MergedLevelSet.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -7542,6 +7949,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/PDTetSolver.cpp.o: /Users/christian
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
@@ -7890,6 +8298,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/PDTetSolver.cpp.o: /Users/christian
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -8010,7 +8419,207 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/PDTetSolver.cpp.o: /Users/christian
   /Users/christian/Court_Cutting_MD/PDTetPhysics/include/MergedLevelSet.h \
   /Users/christian/Court_Cutting_MD/PDTetPhysics/include/PDTetSolver.h \
   /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Math_Tools/RANGE_ITERATOR.h \
-  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h
+  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian/Court_Cutting_MD/PDTetPhysics/src/SchurSolver.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Headers/Alpha.h \
@@ -9096,6 +9705,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iterator \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/limits \
+  /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/locale.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/map \
@@ -9443,6 +10053,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -9550,7 +10161,207 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
   /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/SimulationFlags.h \
   /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/dumper.h \
   /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Math_Tools/RANGE_ITERATOR.h \
-  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h
+  /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Vectors/VectorSTLInterface.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 
 /Users/christian/Court_Cutting_MD/PDTetPhysics/src/SchurSolver.cpp:
@@ -9560,8 +10371,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Users/christian/Court_Cutting_MD/PDTetPhysics/src/PDTetSolver.cpp:
 
 /Users/christian/Court_Cutting_MD/PDTetPhysics/include/MergedLevelSet.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Point_Clouds_Computations/EULER_STEP.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Point_Clouds_Computations/CENTER.h:
 
@@ -9607,25 +10416,37 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/PROJECTED_ARRAY.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/ARRAY_COLLECTION.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/ARRAY.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/TRIANGULATED_SURFACE.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/TOPOLOGY_BASED_GEOMETRY_POLICY.h:
+
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/TOPOLOGY_BASED_GEOMETRY_FORWARD.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/traits.h:
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/STRUCTURE.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Spatial_Acceleration/SPATIAL_ACCELERATION_FORWARD.h:
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/MESH_OBJECT.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology/TOPOLOGY_POLICY.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_NORMAL_COMPUTATION.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Implicit_Objects_Uniform/LEVELSET_IMPLICIT_OBJECT.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Implicit_Objects/IMPLICIT_OBJECT.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_UNIFORM.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_POLICY_UNIFORM.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_3D.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_2D.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Interpolation_Collidable/INTERPOLATION_COLLIDABLE_POLICY_UNIFORM.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Computations/LEVELSET_MAKER_UNIFORM.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Collisions/GRID_BASED_COLLISION_GEOMETRY_COLLECTION_POLICY_UNIFORM.h:
 
@@ -9633,11 +10454,269 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Geometry_Particles/GEOMETRY_PARTICLES.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/TRIANGLE_3D.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/SEGMENT_3D.h:
+
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/BOX.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSAvailability.h:
+/Users/christian/Court_Cutting_MD/PDTetPhysics/src/MergedLevelSet.cpp:
 
-/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/SchurSolver.cpp:
+/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/SchurSolver.h:
+
+/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/ReshapeDataStructure.cpp:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Select.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Product.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/IO.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_const.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/maxabs.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/next.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmcspi.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Block.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_POLICY.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/complex:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
+
+/opt/homebrew/include/eigen3/Eigen/SparseQR:
+
+/opt/homebrew/include/eigen3/Eigen/SparseCore:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Point_Clouds_Computations/EULER_STEP.h:
+
+/opt/homebrew/include/eigen3/Eigen/OrderingMethods:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h:
 
@@ -9649,9 +10728,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/connection.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/availability.h:
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology/TOPOLOGY_POLICY.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/availability.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/INDIRECT_ARRAY.h:
 
@@ -9676,6 +10755,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsobj_id_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_fsid_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h:
 
@@ -9769,6 +10850,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine/exception.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_3D.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/machine.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/boolean.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/mach_voucher_types.h:
@@ -9793,7 +10878,17 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/exception_types.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEventTypes.h:
+
+/opt/homebrew/include/eigen3/Eigen/SparseCholesky:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/error.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdlib.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/vm_param.h:
 
@@ -9810,8 +10905,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/debug.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/OSByteOrder.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/STRUCTURE.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/vm_statistics.h:
 
@@ -9861,11 +10954,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdbool.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_NORMAL_COMPUTATION.h:
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/list:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/fenv.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/complex:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/bsm/audit.h:
 
@@ -9907,8 +10998,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/LinearAlgebra/base.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/TRIANGLE_3D.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/LinearAlgebra/arithmetic.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/LinearAlgebra/LinearAlgebra.h:
@@ -9934,8 +11023,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmkrapi.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmerr.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmcspi.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/vm_page_size.h:
 
@@ -9978,6 +11065,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecKeychainSearch.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/cbrt.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
 
@@ -10065,6 +11154,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOSurface.framework/Headers/IOSurface.h:
 
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/hidsystem/IOLLEvent.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/hidsystem/IOHIDTypes.h:
@@ -10079,17 +11172,13 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Data_Structures/QUEUE.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOMapTypes.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/DiskArbitration.framework/Headers/DASession.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Grids_Uniform_Interpolation/FACE_LOOKUP_UNIFORM.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Interpolation_Collidable/INTERPOLATION_COLLIDABLE_POLICY.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wctype.h:
 
@@ -10111,6 +11200,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTStringAttributes.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/cdefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h:
@@ -10129,6 +11220,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontTraits.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEXRToneMappingGamma.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontManagerErrors.h:
@@ -10141,10 +11234,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontCollection.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_base.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Interpolation_Collidable/INTERPOLATION_COLLIDABLE_UNIFORM_FORWARD.h:
-
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Matrices/QUATERNION.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTDefines.h:
@@ -10155,7 +11244,11 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers/SecurityCore.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers/KeychainCore.h:
+
+/opt/homebrew/include/eigen3/Eigen/SparseLU:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBundle.h:
 
@@ -10175,8 +11268,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers/CSIdentity.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Implicit_Objects/IMPLICIT_OBJECT.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/OSByteOrder.h:
@@ -10192,6 +11283,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers/UTType.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers/UTCoreTypes.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/in_in_out_result.h:
 
@@ -10307,13 +11400,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGWindowLevel.h:
 
-/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/ReshapeDataStructure.cpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGWindow.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGToneMapping.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Implicit_Objects_Uniform/LEVELSET_IMPLICIT_OBJECT.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Matrices/MATRIX_1X1.h:
 
@@ -10331,15 +11420,15 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFContentStream.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/PLANE.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGLayer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Headers/Histogram.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGImage.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOReturn.h:
 
@@ -10348,6 +11437,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Common_Libraries/Common_Tools/Math_Tools/RANGE_ITERATOR.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGGradient.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetServices.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGFunction.h:
 
@@ -10371,23 +11464,21 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplayMetal.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_POLICY.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_MAKER.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGDirectDisplay.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColorSpace.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBitmapContext.h:
 
 /Users/christian/Court_Cutting_MD/PDTetPhysics/include/PDTetSolver.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/countr.h:
 
@@ -10421,8 +11512,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSocket.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/TOPOLOGY_BASED_GEOMETRY_POLICY.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFSet.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFRunLoop.h:
@@ -10454,6 +11543,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFLocale.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFFileDescriptor.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/invoke.h:
 
@@ -10489,6 +11580,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFBase.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Map.h:
+
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Utilities/STATIC_ASSERT.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h:
@@ -10497,15 +11590,11 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAttributedString.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/MESH_OBJECT.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ColorSync.framework/Headers/ColorSyncCMM.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/thread_special_ports.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ColorSync.framework/Headers/ColorSync.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/SEGMENT_3D.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGColor.h:
 
@@ -10514,8 +11603,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetworkDefs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetServices.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFHost.h:
 
@@ -10545,6 +11632,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFStringEncodingExt.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_types.h:
@@ -10567,9 +11656,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/HIServices.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
-
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/BASIC_GEOMETRY_FORWARD.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Accessibility.h:
 
@@ -10582,6 +11671,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/AXUIElement.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEvent.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/AXTextAttributedString.h:
 
@@ -10616,6 +11707,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Headers/Accelerate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/Headers/vecLib.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/base.h:
 
@@ -10691,6 +11784,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/task_special_ports.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/hyperbolic_functions.h:
@@ -10708,8 +11803,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Read_Write/Vectors/READ_WRITE_VECTOR_1D.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/processor.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEventTypes.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Read_Write/Utilities/READ_WRITE_FUNCTIONS.h:
 
@@ -10771,10 +11864,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/maxmag.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_const.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/maxabs.h:
-
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/max.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/exchange.h:
@@ -10785,19 +11874,21 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/argmin.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/AXRoleConstants.h:
 
 /Users/christian/Court_Cutting_MD/simd-numeric-kernels-new/Common/Mask.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/ZERO.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolMetadata.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/ONE.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/Inverse.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology_Based_Geometry/TRIANGULATED_SURFACE.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssm.h:
 
@@ -10899,6 +11990,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/assert.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_assert.h:
 
 /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/GridDeformerTet.cpp:
@@ -10943,6 +12036,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
@@ -10982,8 +12077,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_same.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/wchar.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/ARRAY_COLLECTION.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Vectors/VECTOR_BASE.h:
 
@@ -11042,6 +12135,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ucontext.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int64_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/thread_api.h:
 
@@ -11119,11 +12214,15 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vImage.framework/Headers/vImage_Types.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/copy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h:
 
@@ -11138,6 +12237,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino64_t.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Matrices/MATRIX_3X2.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
 
@@ -11189,6 +12290,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_heap_until.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ColorSync.framework/Headers/ColorSyncTransform.h:
@@ -11231,8 +12334,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/_OSByteOrder.h:
 
-/Users/christian/Court_Cutting_MD/PDTetPhysics/src/MergedLevelSet.cpp:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_if.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Grids_Uniform_Arrays/ARRAYS_ND_BASE.h:
@@ -11241,15 +12342,13 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wctype.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/wchar.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/no_destroy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/version:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology/TRIANGLE_MESH.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFDocument.h:
 
@@ -11271,6 +12370,14 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/variant:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Grids_Uniform_Interpolation/FACE_LOOKUP_UNIFORM.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Interpolation_Collidable/INTERPOLATION_COLLIDABLE_POLICY.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Data_Structures/PAIR.h:
@@ -11287,11 +12394,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/tuple:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstring:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach_debug/ipc_info.h:
 
@@ -11335,7 +12440,13 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_timeval64.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Basic_Geometry/PLANE.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iostream:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iosfwd:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/mem_fn.h:
 
@@ -11365,9 +12476,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int64_t.h:
 
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/next.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype:
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/Robust_Arithmetic.h:
 
@@ -11427,6 +12536,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/qos.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFStream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
@@ -11478,6 +12589,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const_ref.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/move_backward.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Topology/TRIANGLE_MESH.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_const.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/ptrdiff_t.h:
 
@@ -11557,7 +12672,11 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/to_gcc_order.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pointer.h:
 
@@ -11572,6 +12691,12 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/processor_set.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/StringCompare.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET_MAKER.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/compressed_pair.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_nothrow_assignable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/NumberFormatting.h:
 
@@ -11608,6 +12733,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_core_convertible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_clock_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h:
 
@@ -11671,7 +12798,11 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/integral_constant.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h:
 
@@ -11683,6 +12814,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/disjunction.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/exchange.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stdarg_header_macro.h:
@@ -11690,6 +12823,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_object.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/datasizeof.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dispatch/base.h:
 
@@ -11704,6 +12839,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/oidsbase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/conditional.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
 
@@ -11785,15 +12922,23 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_class.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/poll_with_backoff.h:
+
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Computations/LEVELSET_MAKER_UNIFORM.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/id.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTLine.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_empty.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/error_condition.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/AuthSession.h:
 
@@ -11822,6 +12967,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_to_n_result.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__ranges/empty.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
@@ -11895,8 +13042,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
 
-/Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/identity.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/bit_cast.h:
@@ -11907,6 +13052,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/generate_n.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSUnicodeFlattening.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_intersection.h:
@@ -11916,6 +13063,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/for_each_n.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdint.h:
 
@@ -11930,6 +13079,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/lexicographical_compare.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/uninitialized_algorithms.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
 
@@ -11948,6 +13099,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Timer.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CarbonCore.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
 
@@ -12017,6 +13170,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/rank.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers/WSMethodInvocation.h:
@@ -12047,6 +13202,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/size.h:
 
+/opt/homebrew/include/eigen3/Eigen/Core:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/is_permutation.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
@@ -12054,8 +13211,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partial_sort.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/clamp.h:
-
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Level_Sets/LEVELSET_UNIFORM.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Matrices/MATRIX_FORWARD.h:
 
@@ -12074,6 +13229,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_trivial.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__condition_variable/condition_variable.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/AssertMacros.h:
 
@@ -12161,6 +13318,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/ARRAY_NEGATION.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/simd_utils.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/subrange.h:
@@ -12231,6 +13390,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/runetype.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/mach_interface.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_iterator.h:
@@ -12256,8 +13417,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/pthread/qos.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/construct_at.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/u8path.h:
 
@@ -12293,6 +13452,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetDiagnostics.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/arithmetic.h:
@@ -12309,6 +13470,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/compiler.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
+
 /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/Map.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/operations.h:
@@ -12317,9 +13480,13 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecAccess.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h:
+
 /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/GridDeformerTet.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/move_iterator.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
 
@@ -12328,6 +13495,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/system_clock.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/notify.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
 
@@ -12344,8 +13513,6 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/stdio.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__compare/compare_three_way.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__configuration/language.h:
 
@@ -12386,6 +13553,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Grids_Uniform_Interpolation/INTERPOLATION_UNIFORM.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/AE.framework/Headers/AE.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h:
 
@@ -12467,9 +13636,15 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/includes.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Spatial_Acceleration/SPATIAL_ACCELERATION_FORWARD.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__charconv/traits.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/rotate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/partial_sort_copy.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h:
 
@@ -12483,11 +13658,17 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__system_error/system_error.h:
 
+/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Grids_Uniform_Interpolation_Collidable/INTERPOLATION_COLLIDABLE_UNIFORM_FORWARD.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__atomic/atomic_base.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/modulo.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/limits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/unwrap_iter.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/duration.h:
 
@@ -12501,9 +13682,9 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/istream:
 
-/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/SchurSolver.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sift_down.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmapi.h:
 
@@ -12551,6 +13732,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/machine/endian.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Random.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/concepts.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/set_difference.h:
@@ -12568,6 +13751,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MacLocales.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
 
@@ -12587,11 +13772,15 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/remove_copy_if.h:
 
+/opt/homebrew/include/eigen3/Eigen/Sparse:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFNumber.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_iterator_concept.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/rich_error.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/clamp.h:
 
@@ -12655,7 +13844,7 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__cstddef/byte.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Geometry/Level_Sets/LEVELSET.h:
+/opt/homebrew/include/eigen3/Eigen/src/Core/Array.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/width_estimation_table.h:
 
@@ -12670,6 +13859,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/array:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/minmax_element.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
 
@@ -12698,6 +13889,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/predicate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_specialization.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dispatch/object.h:
 
@@ -12729,11 +13922,11 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/inplace_merge.h:
 
-/Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Arrays/ARRAY.h:
-
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/types.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_rune_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/lock_guard.h:
 
@@ -12757,6 +13950,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/find_if_not.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/special_functions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/climits:
@@ -12768,6 +13963,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/binary_search.h:
+
+/Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/src/SchurSolver.cpp:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSAvailability.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/new:
 
@@ -12784,6 +13983,10 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/memory_object_types.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/none_of.h:
 
@@ -12802,6 +14005,8 @@ PDTetPhysics/CMakeFiles/PDTetPhysics.dir/src/SchurSolver.cpp.o: /Users/christian
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/empty.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/destructible.h:
 

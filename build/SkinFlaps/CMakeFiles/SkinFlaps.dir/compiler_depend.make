@@ -1452,6 +1452,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/FacialFlapsGui.cpp.o: /Users/christian/Co
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -1617,6 +1618,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/FacialFlapsGui.cpp.o: /Users/christian/Co
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -3118,6 +3319,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/bccTetScene.cpp.o: /Users/christian/Court
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -3276,6 +3478,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/bccTetScene.cpp.o: /Users/christian/Court
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -4817,6 +5219,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/deepCut.cpp.o: /Users/christian/Court_Cut
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -4993,6 +5396,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/deepCut.cpp.o: /Users/christian/Court_Cut
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb.h \
   /opt/homebrew/include/oneapi/tbb/blocked_nd_range.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
@@ -7382,6 +7985,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/hooks.cpp.o: /Users/christian/Court_Cutti
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -7519,7 +8123,207 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/hooks.cpp.o: /Users/christian/Court_Cutti
   /Users/christian/Court_Cutting_MD/imgui_glfw_nfd_lib/extLibs/gl3w/GL/glcorearb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/hooks.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/skinCutUndermineTets.h \
-  /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h
+  /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 SkinFlaps/CMakeFiles/SkinFlaps.dir/src/json.cpp.o: /Users/christian/Court_Cutting_MD/SkinFlaps/src/json.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -9760,6 +10564,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/main.cpp.o: /Users/christian/Court_Cuttin
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -9925,6 +10730,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/main.cpp.o: /Users/christian/Court_Cuttin
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -12239,6 +13244,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/skinCutUndermineTets.cpp.o: /Users/christ
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -12398,6 +13404,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/skinCutUndermineTets.cpp.o: /Users/christ
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -13888,6 +15094,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/surgicalActions.cpp.o: /Users/christian/C
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -14056,6 +15263,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/surgicalActions.cpp.o: /Users/christian/C
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -15557,6 +16964,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/sutures.cpp.o: /Users/christian/Court_Cut
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -15714,6 +17122,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/sutures.cpp.o: /Users/christian/Court_Cut
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
   /opt/homebrew/include/GLFW/glfw3.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/cache_aligned_allocator.h \
   /opt/homebrew/include/oneapi/tbb/concurrent_hash_map.h \
@@ -17249,6 +18857,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/tetCollisions.cpp.o: /Users/christian/Cou
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -17381,6 +18990,206 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/tetCollisions.cpp.o: /Users/christian/Cou
   /Users/christian/Court_Cutting_MD/gl3wGraphics/materialTriangles.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/tetCollisions.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h \
   /opt/homebrew/include/oneapi/tbb/blocked_nd_range.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range.h \
   /opt/homebrew/include/oneapi/tbb/blocked_range2d.h \
@@ -18924,6 +20733,7 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/tetSubset.cpp.o: /Users/christian/Court_C
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_size_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_wchar_t.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_bf16.h \
+  /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_neon.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_vector_types.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/float.h \
@@ -19056,7 +20866,207 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/tetSubset.cpp.o: /Users/christian/Court_C
   /Users/christian/Court_Cutting_MD/gl3wGraphics/insidePolygon.h \
   /Users/christian/Court_Cutting_MD/gl3wGraphics/materialTriangles.h \
   /Users/christian/Court_Cutting_MD/SkinFlaps/src/tetSubset.h \
-  /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h
+  /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h \
+  /opt/homebrew/include/eigen3/Eigen/Core \
+  /opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers \
+  /opt/homebrew/include/eigen3/Eigen/OrderingMethods \
+  /opt/homebrew/include/eigen3/Eigen/Sparse \
+  /opt/homebrew/include/eigen3/Eigen/SparseCholesky \
+  /opt/homebrew/include/eigen3/Eigen/SparseCore \
+  /opt/homebrew/include/eigen3/Eigen/SparseLU \
+  /opt/homebrew/include/eigen3/Eigen/SparseQR \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Array.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Block.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IO.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Map.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Product.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Random.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Select.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h \
+  /opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h \
+  /opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h \
+  /opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h \
+  /opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h
 
 SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetCutter_tbb.cpp.o: /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetCutter_tbb.cpp \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Availability.h \
@@ -20783,8 +22793,6 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/json.cpp:
 
-/Users/christian/Court_Cutting_MD/SkinFlaps/src/hooks.cpp:
-
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/fence.cpp:
 
 /opt/homebrew/include/oneapi/tbb/tick_count.h:
@@ -20801,8 +22809,6 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /opt/homebrew/include/oneapi/tbb/parallel_reduce.h:
 
-/opt/homebrew/include/oneapi/tbb/parallel_pipeline.h:
-
 /opt/homebrew/include/oneapi/tbb/parallel_for_each.h:
 
 /opt/homebrew/include/oneapi/tbb/null_rw_mutex.h:
@@ -20816,8 +22822,6 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /opt/homebrew/include/oneapi/tbb/detail/_flow_graph_trace_impl.h:
 
 /opt/homebrew/include/oneapi/tbb/detail/_flow_graph_tagged_buffer_impl.h:
-
-/opt/homebrew/include/oneapi/tbb/detail/_flow_graph_node_set_impl.h:
 
 /opt/homebrew/include/oneapi/tbb/detail/_flow_graph_item_buffer_impl.h:
 
@@ -20890,8 +22894,6 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/poisson_distribution.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/piecewise_linear_distribution.h:
-
-/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/negative_binomial_distribution.h:
 
@@ -20977,6 +22979,258 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /opt/homebrew/include/oneapi/tbb/blocked_range.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pruneL.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_heap_relax_snode.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_copy_to_ucol.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_dfs.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_column_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Memory.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLUImpl.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/TriangularSolver.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseVector.h:
+
+/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/piecewise_constant_distribution.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTriangularView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseTranspose.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSparseProductWithPruning.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSolverBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseSelfAdjointView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRef.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMap.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDiagonalProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseBlock.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/MappedSparseMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Structs.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/CompressedStorage.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky_impl.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCholesky/SimplicialCholesky.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Eigen_Colamd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Amd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/SolveWithGuess.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteLUT.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IncompleteCholesky.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BiCGSTAB.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/BasicPreconditioners.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/XprHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/SymbolicIndex.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/StaticAssert.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReshapedHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Memory.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Macros.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/MKL_support.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IntegralConstant.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/IndexedViewHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Constants.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/BlasUtil.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularSolverMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointRank2Update.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointProduct.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixVector.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/SelfadjointMatrixMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/Parallelizer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixVector.h:
+
+/opt/homebrew/include/oneapi/tbb/parallel_pipeline.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrixTriangular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralMatrixMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/GeneralBlockPanelKernel.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/UnaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/TernaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/StlFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/NullaryFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/AssignmentFunctors.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/GeneralBlockPanelKernel.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/TypeCasting.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctionsFwd.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/GenericPacketMathFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/ConjHelper.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/BFloat16.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorwiseOp.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/TriangularMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Swap.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Stride.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/StlIterators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolverBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SolveTriangular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Solve.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfAdjointView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Select.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reverse.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ReturnByValue.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Ref.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Redux.h:
+
+/Users/christian/Court_Cutting_MD/SkinFlaps/src/hooks.cpp:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ProductEvaluators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Product.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PlainObjectBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PermutationMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NumTraits.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NestByValue.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MatrixBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MapBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Inverse.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/IndexedView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/IO.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GlobalFunctions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GenericPacketMath.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Dot.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_kernel_bmod.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseCoeffsBase.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryView.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseNullaryOp.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseBinaryOp.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreIterators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CoreEvaluators.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/CommaInitializer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/BooleanRedux.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/BandMatrix.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/AssignEvaluator.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Assign.h:
+
+/opt/homebrew/include/oneapi/tbb/detail/_flow_graph_node_set_impl.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Array.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArithmeticSequence.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ReshapedMethods.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/IndexedViewMethods.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseBinaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/BlockMethods.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseBinaryOps.h:
+
+/opt/homebrew/include/eigen3/Eigen/SparseLU:
+
+/opt/homebrew/include/eigen3/Eigen/SparseCore:
+
+/opt/homebrew/include/eigen3/Eigen/Sparse:
+
+/opt/homebrew/include/eigen3/Eigen/OrderingMethods:
+
+/opt/homebrew/include/eigen3/Eigen/Core:
+
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/vnBccTetrahedra.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/lognormal_distribution.h:
@@ -20985,7 +23239,11 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/sutures.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/VectorBlock.h:
+
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/surgicalActions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/Meta.h:
 
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/remapTetPhysics.h:
 
@@ -21006,6 +23264,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/unordered_set:
 
 /Users/christian/Court_Cutting_MD/gl3wGraphics/trackball.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_gemm_kernel.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRunDelegate.h:
 
@@ -21047,6 +23307,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Vectors/SCALAR_POLICY.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Map.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFAvailability.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Utilities/STATIC_ASSERT.h:
@@ -21080,6 +23342,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Matrices/DIAGONAL_MATRIX_2X2.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/maxmag.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/add_const.h:
 
@@ -21161,6 +23425,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/ptrcheck.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseFuzzy.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_pod.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_mutexattr_t.h:
@@ -21187,6 +23453,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_null.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/Complex.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_seek_set.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/type_list.h:
@@ -21196,6 +23464,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/OSServices.framework/Headers/WSProtocolHandler.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/connection.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/ConjugateGradient.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/xpc/availability.h:
 
@@ -21350,6 +23620,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Accessibility.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/__endian.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseBinaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGShading.h:
 
@@ -21665,6 +23937,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/system_error:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayBase.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/MachineExceptions.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/stdlib.h:
@@ -21753,6 +24027,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/ctype.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpositions.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstring:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmkrspi.h:
@@ -21762,6 +24038,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdint:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cstdarg:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/CommonCwiseUnaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/complex:
 
@@ -21785,6 +24063,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/ranlux.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseUnaryOp.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/next.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cctype:
@@ -21794,6 +24074,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/cassert:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/bitset:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/SelfCwiseBinaryOp.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/Robust_Arithmetic.h:
 
@@ -21863,6 +24145,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/result_of.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/MathFunctions.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/remove_volatile.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/ranges_fill_n.h:
@@ -21913,6 +24197,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_signed.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Visitor.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/parser_std_format_spec.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_scalar.h:
@@ -21937,6 +24223,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_fundamental.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDot.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers/LaunchServices.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/in_in_out_result.h:
@@ -21960,6 +24248,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_destructible.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_core_convertible.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/products/TriangularMatrixMatrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_locale.h:
 
@@ -21995,9 +24285,13 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_allocator.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparsePermutation.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CFData.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/invoke.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Settings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/extent.h:
 
@@ -22014,6 +24308,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/dependent_type.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/decay.h:
+
+/Library/Developer/CommandLineTools/usr/lib/clang/17/include/arm_fp16.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dispatch/base.h:
 
@@ -22064,6 +24360,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ColorSync.framework/Headers/ColorSyncTransform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__thread/thread.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseUtil.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_class.h:
 
@@ -22141,6 +24439,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/mutex.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Transpose.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/lock_guard.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory_resource/polymorphic_allocator.h:
@@ -22162,6 +24462,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/arm/rpc.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/shared_ptr.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/AmbiVector.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/raw_storage_iterator.h:
 
@@ -22223,7 +24525,11 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/trigonometric_functions.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/ConservativeSparseSparseProduct.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/special_functions.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DenseStorage.h:
 
 /Users/christian/Court_Cutting_MD/gl3wGraphics/lines.h:
 
@@ -22248,6 +24554,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/appleapiopts.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__math/hypot.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_relax_snode.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/temporary_buffer.h:
 
@@ -22333,6 +24641,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/insert_iterator.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Block.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/incrementable_traits.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__mutex/tag_types.h:
@@ -22407,6 +24717,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/unary_function.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseQR/SparseQR.h:
+
 /Users/christian/Court_Cutting_MD/gl3wGraphics/Vec2f.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/reference_wrapper.h:
@@ -22461,6 +24773,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__functional/binder1st.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseUnaryOp.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecKeychainItem.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/arm/_mcontext.h:
@@ -22504,6 +24818,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/libkern/arm/OSByteOrder.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_id_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ReenableStupidWarnings.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/path_iterator.h:
 
@@ -22587,6 +24903,10 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/common_reference_with.h:
 
+/opt/homebrew/include/eigen3/Eigen/SparseQR:
+
+/opt/homebrew/include/eigen3/Eigen/IterativeLinearSolvers:
+
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_header_macro.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/class_or_enum.h:
@@ -22606,6 +24926,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/processor_info.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_parse_context.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Fuzzy.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_posix_vdisable.h:
 
@@ -22724,6 +25046,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__fwd/subrange.h:
 
 /Users/christian/Court_Cutting_MD/SkinFlaps/src/surgicalActions.cpp:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseAssign.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/simd_utils.h:
 
@@ -22870,6 +25194,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/max_element.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/SpeechSynthesis.framework/Headers/SpeechSynthesis.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalMatrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSUnicodeFlattening.h:
 
@@ -23075,17 +25401,23 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseRedux.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/common_reference.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/aliasing_iterator.h:
 
 /Library/Developer/CommandLineTools/usr/lib/clang/17/include/__stddef_max_align_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/plugins/ArrayCwiseUnaryOps.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGContext.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/space_info.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/streambuf:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Matrix.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/LinearAlgebra/matrix.h:
 
@@ -23117,6 +25449,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_blksize_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/OrderingMethods/Ordering.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_ctermid.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h:
@@ -23129,6 +25463,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/unwrap_ref.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/Default/Half.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/__wctype.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/MacTypes.h:
@@ -23138,6 +25474,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdlib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/Block.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/functors/BinaryFunctors.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dispatch/object.h:
 
@@ -23253,6 +25591,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGITUToneMapping.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/EigenBase.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOReturn.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__numeric/gcd_lcm.h:
@@ -23291,6 +25631,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/Icons.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/ConditionEstimator.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmcspi.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/Sparse/SolveImplementationTyped.h:
@@ -23320,6 +25662,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/x509defs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/semiregular.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/LeastSquareConjugateGradient.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/clamp.h:
 
@@ -23366,6 +25710,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/out_ptr.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/ONE.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/GeneralProduct.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecProtocolMetadata.h:
 
@@ -23473,7 +25819,13 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/memory_object_types.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Reshaped.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/DiagonalProduct.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/none_of.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/arch/NEON/PacketMath.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOMapTypes.h:
 
@@ -23499,6 +25851,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/underlying_type.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/DisableStupidWarnings.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGPDFStream.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_int8_t.h:
@@ -23506,6 +25860,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATSUI.framework/Headers/ATSUnicodeGlyphs.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreVideo.framework/Headers/CVPixelBuffer.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCwiseBinaryOp.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_attr_t.h:
 
@@ -23537,6 +25893,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTRun.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_panel_dfs.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEXRToneMappingGamma.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTFontManagerErrors.h:
@@ -23554,6 +25912,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Users/christian/Court_Cutting_MD/simd-numeric-kernels-new/Common/Mask.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Math_Tools/ZERO.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/MathFunctionsImpl.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/AXRoleConstants.h:
 
@@ -23578,6 +25938,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/reverse_access.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/SharedFileList.framework/Headers/LSSharedFileList.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/PartialReduxEvaluator.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__concepts/destructible.h:
 
@@ -23639,9 +26001,13 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEvent.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_SupernodalMatrix.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/ApplicationServices.framework/Frameworks/HIServices.framework/Headers/AXTextAttributedString.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Headers/LSConstants.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/ArrayWrapper.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__exception/exception.h:
 
@@ -23664,6 +26030,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/UnicodeUtilities.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_u_int16_t.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/IterativeLinearSolvers/IterativeSolverBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/vecLib.framework/Headers/thread_api.h:
 
@@ -23825,11 +26193,15 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/CodeFragments.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ConfigureVectorization.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGAffineTransform.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__bit/countr.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/type_traits:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_pivotL.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/convert_to_timespec.h:
 
@@ -23860,6 +26232,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__chrono/file_clock.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/count_if.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Diagonal.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_unbounded_array.h:
 
@@ -23943,6 +26317,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocator_arg_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/CwiseTernaryOp.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetServices.h:
 
 /Users/christian/Court_Cutting_MD/gl3wGraphics/gl3wGraphics.h:
@@ -23961,6 +26337,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__random/random_device.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/util/ForwardDeclarations.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/allocation_guard.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/CarbonCore.framework/Headers/Timer.h:
@@ -23970,6 +26348,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Read_Write/Utilities/READ_WRITE_FUNCTIONS.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/mach/processor.h:
+
+/opt/homebrew/include/eigen3/Eigen/SparseCholesky:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGEventTypes.h:
 
@@ -23984,6 +26364,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__format/format_arg.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__config_site:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseCompressedBase.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/gethostuuid.h:
 
@@ -24077,6 +26459,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmspi.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseView.h:
+
 /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/GridDeformerTet.h:
 
 /Users/christian/Court_Cutting_MD/PhysBAM_subset/Public_Library/PhysBAM_Tools/Utilities/NONCOPYABLE.h:
@@ -24111,6 +26495,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CoreGraphics.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/Core/Random.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__memory/concepts.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreText.framework/Headers/CTStringAttributes.h:
@@ -24144,6 +26530,10 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/IOKit.framework/Headers/IOKitLib.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecItem.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/StableNorm.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/plugins/MatrixCwiseUnaryOps.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreGraphics.framework/Headers/CGBitmapContext.h:
 
@@ -24187,6 +26577,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Headers/MDImporter.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseColEtree.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetworkDefs.h:
@@ -24203,11 +26595,15 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/SecCertificate.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseDenseProduct.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/System/Library/Frameworks/Security.framework/Headers/cssmapi.h:
 
 /Users/christian/Court_Cutting_MD/PDTetPhysics/PDDeformer/include/SchurSolver.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__algorithm/sift_down.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/SparseLU/SparseLU_Utils.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/rank.h:
 
@@ -24222,6 +26618,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__utility/auto_cast.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__filesystem/operations.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/Replicate.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__iterator/iter_swap.h:
 
@@ -24265,6 +26663,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_types/_ino_t.h:
 
+/opt/homebrew/include/eigen3/Eigen/src/SparseCore/SparseMatrixBase.h:
+
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/iomanip:
 
 /opt/homebrew/include/oneapi/tbb/detail/_pipeline_filters_deduction.h:
@@ -24282,6 +26682,8 @@ SkinFlaps/CMakeFiles/SkinFlaps.dir/src/vnBccTetrahedra.cpp.o: /Users/christian/C
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/c++/v1/__type_traits/is_union.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/ConditionalMacros.h:
+
+/opt/homebrew/include/eigen3/Eigen/src/Core/NoAlias.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/sys/_pthread/_pthread_rwlock_t.h:
 
